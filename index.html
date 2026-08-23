@@ -6,22 +6,22 @@
 
 <title>La sorpresa di Marta 🌊</title>
 
-<meta name="theme-color" content="#79b9d4">
+<meta name="theme-color" content="#78b9d5">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
 <style>
 
 :root {
-    --mare-profondo: #123c59;
-    --blu-mare: #23658a;
-    --azzurro: #78b9d5;
-    --azzurro-chiaro: #b9dce8;
-    --bianco: #ffffff;
-    --sabbia: #d9c3a0;
-    --sabbia-chiara: #efe3cd;
-    --testo: #17384d;
-    --ombra: 0 18px 50px rgba(18,60,89,.15);
+    --deep: #123c59;
+    --blue: #28749a;
+    --sky: #82c2dc;
+    --light: #dceff5;
+    --white: #ffffff;
+    --sand: #d9c3a0;
+    --sand-light: #f3eadc;
+    --text: #17384d;
+    --gray: #607782;
 }
 
 * {
@@ -36,42 +36,46 @@ html {
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    color: var(--testo);
+    color: var(--text);
     background: #eef8fb;
     overflow-x: hidden;
 }
 
-/* =========================
-   ONDE
-========================= */
-
-.wave {
-    position: absolute;
-    left: -10%;
-    width: 120%;
-    height: 80px;
-    border-radius: 50%;
-    background: rgba(255,255,255,.25);
-    animation: waveMove 8s ease-in-out infinite;
+section {
+    padding: 75px 20px;
 }
 
-.wave.one {
-    bottom: -35px;
+.container {
+    width: 100%;
+    max-width: 850px;
+    margin: auto;
 }
 
-.wave.two {
-    bottom: -55px;
-    opacity: .5;
-    animation-delay: -3s;
+.section-label {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 10px;
+    font-weight: 800;
+    color: var(--blue);
+    margin-bottom: 12px;
 }
 
-@keyframes waveMove {
-    0%,100% {
-        transform: translateX(-2%);
-    }
-    50% {
-        transform: translateX(2%);
-    }
+.section-title {
+    text-align: center;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 38px;
+    font-weight: 400;
+    color: var(--deep);
+    margin-bottom: 18px;
+}
+
+.section-text {
+    text-align: center;
+    max-width: 580px;
+    margin: auto;
+    color: var(--gray);
+    line-height: 1.7;
 }
 
 /* =========================
@@ -82,20 +86,22 @@ body {
     min-height: 100svh;
     position: relative;
     overflow: hidden;
+
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+
     text-align: center;
-    padding: 35px 25px 100px;
+
+    padding: 40px 25px 100px;
 
     background:
         linear-gradient(
             180deg,
-            #86c7df 0%,
-            #6fb0cf 32%,
-            #387ea4 65%,
-            #17516f 100%
+            #8acbe2 0%,
+            #72b5d1 35%,
+            #3c82a6 68%,
+            #164e6b 100%
         );
 }
 
@@ -103,12 +109,16 @@ body {
     position: absolute;
     top: 70px;
     right: 12%;
+
     width: 90px;
     height: 90px;
+
     border-radius: 50%;
+
     background: rgba(255,255,255,.55);
-    filter: blur(2px);
-    box-shadow: 0 0 60px rgba(255,255,255,.35);
+
+    box-shadow:
+        0 0 60px rgba(255,255,255,.4);
 }
 
 .hero-content {
@@ -119,112 +129,145 @@ body {
 
 .secret-label {
     display: inline-block;
+
     padding: 9px 18px;
+
     border-radius: 50px;
+
     background: rgba(255,255,255,.18);
     border: 1px solid rgba(255,255,255,.5);
+
     color: white;
-    font-size: 12px;
+
+    font-size: 11px;
     font-weight: 700;
     letter-spacing: 2px;
+
     backdrop-filter: blur(10px);
+
     margin-bottom: 25px;
 }
 
 .hero h1 {
     color: white;
+
     font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(48px, 15vw, 88px);
+
+    font-size: clamp(50px, 15vw, 90px);
+
     line-height: .95;
+
     font-weight: 400;
+
+    text-shadow:
+        0 8px 25px rgba(0,0,0,.15);
+
     margin-bottom: 22px;
-    text-shadow: 0 8px 25px rgba(0,0,0,.12);
 }
 
 .hero h1 span {
     display: block;
-    font-size: .55em;
+
+    font-size: .52em;
+
     font-style: italic;
-    margin-top: 10px;
+
+    margin-top: 12px;
 }
 
 .hero-subtitle {
     color: rgba(255,255,255,.92);
+
     font-size: 16px;
+
     line-height: 1.7;
+
     max-width: 420px;
+
     margin: auto;
 }
 
 .enter-btn {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
+
     margin-top: 35px;
-    padding: 16px 27px;
+
+    padding: 16px 28px;
+
     border-radius: 50px;
+
     background: white;
-    color: var(--mare-profondo);
+
+    color: var(--deep);
+
     text-decoration: none;
-    font-size: 14px;
+
+    font-size: 13px;
+
     font-weight: 800;
-    letter-spacing: .5px;
-    box-shadow: 0 15px 35px rgba(0,0,0,.18);
-    transition: .25s;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.18);
+
+    transition: .2s;
 }
 
 .enter-btn:active {
     transform: scale(.96);
 }
 
-.scroll-indicator {
+.scroll {
     position: absolute;
+
     bottom: 28px;
+
     color: white;
-    font-size: 12px;
+
+    font-size: 11px;
+
     letter-spacing: 2px;
+
     opacity: .8;
 }
 
-/* =========================
-   SEZIONI
-========================= */
+/* WAVES */
 
-section {
-    padding: 75px 20px;
-    position: relative;
+.wave {
+    position: absolute;
+
+    left: -10%;
+
+    width: 120%;
+    height: 75px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.23);
+
+    animation: wave 8s ease-in-out infinite;
 }
 
-.container {
-    max-width: 850px;
-    margin: auto;
+.wave.one {
+    bottom: -35px;
 }
 
-.section-label {
-    text-align: center;
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--blu-mare);
-    margin-bottom: 12px;
+.wave.two {
+    bottom: -55px;
+    opacity: .45;
+    animation-delay: -3s;
 }
 
-.section-title {
-    text-align: center;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 38px;
-    font-weight: 400;
-    color: var(--mare-profondo);
-    margin-bottom: 18px;
-}
+@keyframes wave {
+    0%,100% {
+        transform: translateX(-2%);
+    }
 
-.section-text {
-    text-align: center;
-    color: #547080;
-    line-height: 1.7;
-    max-width: 580px;
-    margin: auto;
+    50% {
+        transform: translateX(2%);
+    }
 }
 
 /* =========================
@@ -232,40 +275,55 @@ section {
 ========================= */
 
 .countdown-section {
-    background: var(--sabbia-chiara);
+    background: var(--sand-light);
 }
 
 .countdown {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
     gap: 9px;
+
     margin-top: 35px;
 }
 
 .time-box {
-    background: rgba(255,255,255,.75);
+    background: rgba(255,255,255,.8);
+
     border-radius: 18px;
+
     padding: 18px 5px;
+
     text-align: center;
-    box-shadow: 0 8px 25px rgba(100,70,40,.08);
+
+    box-shadow:
+        0 8px 25px rgba(100,70,40,.08);
 }
 
 .time-number {
     font-size: 28px;
+
     font-weight: 800;
-    color: var(--mare-profondo);
+
+    color: var(--deep);
 }
 
 .time-label {
     margin-top: 5px;
+
     font-size: 9px;
+
     text-transform: uppercase;
+
     letter-spacing: 1px;
-    color: #6d7e85;
+
+    color: #71828a;
 }
 
 /* =========================
-   MISSIONE
+   MISSION
 ========================= */
 
 .mission {
@@ -274,42 +332,67 @@ section {
 
 .mission-card {
     margin-top: 35px;
+
     padding: 30px 25px;
+
     border-radius: 28px;
-    background: linear-gradient(145deg,#f8fcfd,#e5f4f8);
-    box-shadow: var(--ombra);
-    border: 1px solid rgba(35,101,138,.08);
+
+    background:
+        linear-gradient(
+            145deg,
+            #f8fcfd,
+            #e5f4f8
+        );
+
+    box-shadow:
+        0 18px 50px rgba(18,60,89,.12);
+
+    border:
+        1px solid rgba(35,101,138,.08);
+
+    text-align: center;
 }
 
 .mission-icon {
-    font-size: 42px;
+    font-size: 43px;
     margin-bottom: 15px;
 }
 
 .mission-card h3 {
     font-family: Georgia, serif;
-    font-size: 25px;
-    color: var(--mare-profondo);
+
+    font-size: 26px;
+
+    color: var(--deep);
+
     margin-bottom: 15px;
 }
 
 .mission-card p {
     line-height: 1.7;
-    color: #587180;
+
+    color: var(--gray);
 }
 
 .rules {
-    margin-top: 25px;
     display: grid;
+
     gap: 10px;
+
+    margin-top: 25px;
 }
 
 .rule {
     background: white;
+
     border-radius: 14px;
+
     padding: 14px;
+
     font-size: 14px;
-    box-shadow: 0 5px 15px rgba(0,0,0,.04);
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,.04);
 }
 
 /* =========================
@@ -327,57 +410,77 @@ section {
 
 .info-grid {
     display: grid;
+
     gap: 15px;
+
     margin-top: 35px;
 }
 
 .info-card {
     background: white;
+
     border-radius: 22px;
-    padding: 23px;
-    box-shadow: 0 10px 30px rgba(35,101,138,.09);
+
+    padding: 24px;
+
+    box-shadow:
+        0 10px 30px rgba(35,101,138,.09);
 }
 
-.info-card .icon {
+.info-icon {
     font-size: 30px;
+
     margin-bottom: 12px;
 }
 
 .info-card h3 {
     font-size: 17px;
-    margin-bottom: 7px;
+
+    margin-bottom: 8px;
 }
 
 .info-card p {
-    color: #637984;
-    line-height: 1.6;
+    color: var(--gray);
+
+    line-height: 1.65;
+
     font-size: 14px;
 }
 
 .map-btn {
     display: inline-block;
-    margin-top: 12px;
-    padding: 10px 16px;
-    background: var(--blu-mare);
+
+    margin-top: 14px;
+
+    padding: 11px 18px;
+
+    background: var(--blue);
+
     color: white;
+
     border-radius: 50px;
+
     text-decoration: none;
+
     font-size: 12px;
-    font-weight: 700;
+
+    font-weight: 800;
 }
 
 /* =========================
-   PALETTE PANTONE
+   PALETTE
 ========================= */
 
 .palette-section {
-    background: var(--mare-profondo);
+    background: var(--deep);
+
     color: white;
+
     overflow: hidden;
 }
 
 .palette-section .section-label {
-    color: var(--azzurro-chiaro);
+    color: var(--sky);
 }
 
 .palette-section .section-title {
@@ -389,109 +492,113 @@ section {
 }
 
 .palette-wrapper {
-    margin-top: 40px;
     display: flex;
+
     flex-direction: column;
+
     gap: 8px;
+
+    max-width: 650px;
+
+    margin: 40px auto 0;
 }
 
 .color-strip {
-    position: relative;
     min-height: 105px;
+
     border-radius: 5px;
+
     padding: 18px 20px;
+
     display: flex;
+
     align-items: flex-end;
+
     justify-content: space-between;
+
     cursor: pointer;
-    overflow: hidden;
-    transition: .3s;
-    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+
+    transition: .25s;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.15);
 }
 
 .color-strip:active {
     transform: scale(.98);
 }
 
-.color-strip::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        110deg,
-        transparent 20%,
-        rgba(255,255,255,.25) 50%,
-        transparent 80%
-    );
-    transform: translateX(-100%);
-    transition: .6s;
-}
-
-.color-strip:hover::after {
-    transform: translateX(100%);
-}
-
 .color-name {
     font-weight: 800;
+
     letter-spacing: 1px;
+
     font-size: 14px;
-    position: relative;
-    z-index: 2;
 }
 
 .color-code {
     font-size: 11px;
+
     opacity: .8;
-    position: relative;
-    z-index: 2;
 }
 
 .deep-sea {
     background: #123c59;
-    color: white;
 }
 
 .ocean-blue {
     background: #28749a;
-    color: white;
 }
 
 .sky-blue {
     background: #82c2dc;
+
     color: #17384d;
 }
 
 .white-color {
-    background: #ffffff;
+    background: white;
+
     color: #17384d;
 }
 
 .sand {
     background: #d9c3a0;
+
     color: #17384d;
 }
 
 .palette-note {
-    margin-top: 25px;
     text-align: center;
+
+    margin-top: 25px;
+
     color: rgba(255,255,255,.55);
+
     font-size: 11px;
-    line-height: 1.6;
 }
 
 /* =========================
-   MODAL COLORE
+   MODAL PALETTE
 ========================= */
 
 .color-modal {
     position: fixed;
+
     inset: 0;
+
     background: rgba(8,35,51,.75);
+
     backdrop-filter: blur(10px);
+
     display: none;
+
     align-items: center;
+
     justify-content: center;
+
     z-index: 1000;
+
     padding: 25px;
 }
 
@@ -501,51 +608,58 @@ section {
 
 .modal-box {
     width: 100%;
-    max-width: 400px;
-    background: white;
-    border-radius: 28px;
-    padding: 25px;
-    box-shadow: 0 25px 70px rgba(0,0,0,.25);
-    animation: modalIn .3s ease;
-}
 
-@keyframes modalIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px) scale(.97);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
+    max-width: 400px;
+
+    background: white;
+
+    border-radius: 28px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.25);
 }
 
 .modal-color {
     height: 150px;
+
     border-radius: 18px;
+
     margin-bottom: 22px;
 }
 
 .modal-box h3 {
     font-family: Georgia, serif;
+
     font-size: 28px;
-    color: var(--mare-profondo);
+
+    color: var(--deep);
 }
 
 .modal-box p {
     margin-top: 8px;
-    color: #61737d;
+
+    color: var(--gray);
+
     line-height: 1.6;
 }
 
 .close-modal {
     margin-top: 22px;
+
     width: 100%;
+
     border: 0;
+
     padding: 13px;
+
     border-radius: 50px;
-    background: var(--mare-profondo);
+
+    background: var(--deep);
+
     color: white;
+
     font-weight: 700;
 }
 
@@ -559,172 +673,169 @@ section {
 
 .dress-colors {
     display: flex;
+
     justify-content: center;
+
     gap: 10px;
+
     margin: 30px auto;
 }
 
 .dress-color {
-    width: 52px;
-    height: 52px;
+    width: 50px;
+
+    height: 50px;
+
     border-radius: 50%;
-    box-shadow: 0 5px 15px rgba(0,0,0,.12);
+
     border: 4px solid white;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,.12);
 }
 
-.dress-message {
-    max-width: 520px;
-    margin: auto;
+.dress-text {
     text-align: center;
+
     font-family: Georgia, serif;
-    font-size: 23px;
-    line-height: 1.5;
-    color: var(--mare-profondo);
-}
 
-/* =========================
-   TIMELINE
-========================= */
+    font-size: 25px;
 
-.timeline-section {
-    background: white;
-}
+    color: var(--deep);
 
-.timeline {
-    margin-top: 40px;
-    position: relative;
-}
-
-.timeline::before {
-    content: "";
-    position: absolute;
-    left: 25px;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: #c6e0e9;
-}
-
-.timeline-item {
-    position: relative;
-    padding-left: 65px;
-    padding-bottom: 30px;
-}
-
-.timeline-dot {
-    position: absolute;
-    left: 16px;
-    top: 0;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: var(--azzurro);
-    border: 4px solid white;
-    box-shadow: 0 0 0 2px #b6dce8;
-}
-
-.timeline-time {
-    font-weight: 800;
-    font-size: 13px;
-    color: var(--blu-mare);
-    margin-bottom: 4px;
-}
-
-.timeline-title {
-    font-family: Georgia, serif;
-    font-size: 20px;
-    margin-bottom: 5px;
-}
-
-.timeline-text {
-    color: #6b7e87;
-    font-size: 13px;
     line-height: 1.5;
 }
 
 /* =========================
-   COSA PORTARE
+   CONFERMA PRESENZA
 ========================= */
 
-.bring-section {
-    background: linear-gradient(180deg,#dff1f6,#f5fbfc);
+.rsvp-section {
+    background:
+        linear-gradient(
+            180deg,
+            #e0f2f7,
+            #f7fbfc
+        );
 }
 
-.bring-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
+.rsvp-card {
     margin-top: 35px;
-}
 
-.bring-card {
-    background: white;
-    border-radius: 20px;
-    padding: 22px 12px;
-    text-align: center;
-    box-shadow: 0 8px 25px rgba(35,101,138,.07);
-}
-
-.bring-card .emoji {
-    font-size: 31px;
-    margin-bottom: 10px;
-}
-
-.bring-card strong {
-    display: block;
-    font-size: 13px;
-}
-
-.bring-card span {
-    display: block;
-    margin-top: 5px;
-    font-size: 11px;
-    color: #78909b;
-}
-
-/* =========================
-   AREA TOP SECRET
-========================= */
-
-.secret-section {
-    background: #102f43;
-    color: white;
-}
-
-.secret-box {
-    margin-top: 35px;
     padding: 35px 25px;
-    border: 1px solid rgba(255,255,255,.15);
-    border-radius: 25px;
+
+    border-radius: 28px;
+
+    background: white;
+
     text-align: center;
-    background: rgba(255,255,255,.04);
+
+    box-shadow:
+        0 15px 45px rgba(35,101,138,.1);
 }
 
-.lock {
-    font-size: 45px;
-    margin-bottom: 18px;
+.rsvp-icon {
+    font-size: 42px;
+
+    margin-bottom: 15px;
 }
 
-.secret-box h3 {
+.rsvp-card h3 {
     font-family: Georgia, serif;
+
     font-size: 27px;
+
+    color: var(--deep);
+
     margin-bottom: 12px;
 }
 
-.secret-box p {
-    color: rgba(255,255,255,.65);
-    line-height: 1.6;
+.rsvp-card p {
+    color: var(--gray);
+
+    line-height: 1.7;
+
     font-size: 14px;
 }
 
-.secret-btn {
-    margin-top: 23px;
-    border: 1px solid rgba(255,255,255,.3);
-    background: transparent;
-    color: white;
+.whatsapp-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-top: 25px;
+
+    padding: 15px 25px;
+
     border-radius: 50px;
-    padding: 13px 20px;
-    font-weight: 700;
+
+    background: #1fa855;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 10px 25px rgba(31,168,85,.2);
+}
+
+/* =========================
+   REGOLA D'ORO
+========================= */
+
+.secret-rule {
+    background: var(--deep);
+
+    color: white;
+}
+
+.secret-rule .section-label {
+    color: var(--sky);
+}
+
+.secret-rule .section-title {
+    color: white;
+}
+
+.secret-rule-card {
+    margin-top: 35px;
+
+    padding: 40px 25px;
+
+    border-radius: 28px;
+
+    background: rgba(255,255,255,.05);
+
+    border:
+        1px solid rgba(255,255,255,.12);
+
+    text-align: center;
+}
+
+.big-lock {
+    font-size: 48px;
+
+    margin-bottom: 18px;
+}
+
+.secret-rule-card h3 {
+    font-family: Georgia, serif;
+
+    font-size: 28px;
+
+    margin-bottom: 12px;
+}
+
+.secret-rule-card p {
+    color: rgba(255,255,255,.7);
+
+    line-height: 1.7;
 }
 
 /* =========================
@@ -733,25 +844,33 @@ section {
 
 footer {
     padding: 55px 20px;
+
     background: #0b2738;
+
     color: rgba(255,255,255,.7);
+
     text-align: center;
 }
 
-.footer-heart {
+.footer-icon {
     font-size: 35px;
+
     margin-bottom: 15px;
 }
 
 footer h3 {
     color: white;
+
     font-family: Georgia, serif;
+
     font-size: 25px;
+
     font-weight: 400;
 }
 
 footer p {
     margin-top: 10px;
+
     font-size: 12px;
 }
 
@@ -762,37 +881,8 @@ footer p {
 @media (min-width: 700px) {
 
     .info-grid {
-        grid-template-columns: repeat(3,1fr);
-    }
-
-    .bring-grid {
-        grid-template-columns: repeat(4,1fr);
-    }
-
-    .palette-wrapper {
-        max-width: 650px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .mission-card {
-        padding: 40px;
-    }
-
-}
-
-/* =========================
-   SAFE AREA IPHONE
-========================= */
-
-@supports (padding: max(0px)) {
-
-    .hero {
-        padding-top: max(35px, env(safe-area-inset-top));
-    }
-
-    footer {
-        padding-bottom: max(55px, env(safe-area-inset-bottom));
+        grid-template-columns:
+            repeat(3, 1fr);
     }
 
 }
@@ -802,8 +892,9 @@ footer p {
 
 <body>
 
+
 <!-- ==================================================
-     HERO
+     COPERTINA
 ================================================== -->
 
 <header class="hero">
@@ -835,7 +926,7 @@ footer p {
     <div class="wave one"></div>
     <div class="wave two"></div>
 
-    <div class="scroll-indicator">
+    <div class="scroll">
         SCORRI ↓
     </div>
 
@@ -859,7 +950,7 @@ footer p {
         </h2>
 
         <p class="section-text">
-            Il conto alla rovescia è ufficialmente iniziato.
+            Il conto alla rovescia è iniziato.
             Mi raccomando: Marta non deve sapere nulla. 🤫
         </p>
 
@@ -926,7 +1017,7 @@ footer p {
             <p>
                 Tutti devono arrivare preparati,
                 puntuali e soprattutto...
-                estremamente bravi a mantenere un segreto.
+                estremamente bravi a mantenere il segreto.
             </p>
 
             <div class="rules">
@@ -936,15 +1027,15 @@ footer p {
                 </div>
 
                 <div class="rule">
-                    📱 <strong>Regola #2</strong> — Occhio alle notifiche.
+                    📱 <strong>Regola #2</strong> — Attenzione alle notifiche.
                 </div>
 
                 <div class="rule">
-                    ⏰ <strong>Regola #3</strong> — Arrivare puntuali.
+                    ⏰ <strong>Regola #3</strong> — Rispettare l'orario.
                 </div>
 
                 <div class="rule">
-                    🎉 <strong>Regola #4</strong> — Divertirsi tantissimo.
+                    🎉 <strong>Regola #4</strong> — Divertirsi.
                 </div>
 
             </div>
@@ -974,11 +1065,16 @@ footer p {
 
         <div class="info-grid">
 
+
             <div class="info-card">
 
-                <div class="icon">📅</div>
+                <div class="info-icon">
+                    📅
+                </div>
 
-                <h3>Quando</h3>
+                <h3>
+                    Quando
+                </h3>
 
                 <p>
                     Martedì<br>
@@ -990,37 +1086,48 @@ footer p {
 
             <div class="info-card">
 
-                <div class="icon">📍</div>
+                <div class="info-icon">
+                    🕗
+                </div>
 
-                <h3>Dove</h3>
+                <h3>
+                    Orario
+                </h3>
 
                 <p>
-                    NOME LOCATION<br>
-                    <strong>Inserire indirizzo</strong>
+                    Appuntamento<br>
+                    <strong>20:00</strong>
                 </p>
-
-                <a
-                    class="map-btn"
-                    href="https://maps.google.com"
-                    target="_blank">
-                    APRI MAPPA
-                </a>
 
             </div>
 
 
             <div class="info-card">
 
-                <div class="icon">🕐</div>
+                <div class="info-icon">
+                    📍
+                </div>
 
-                <h3>Orario</h3>
+                <h3>
+                    Dove
+                </h3>
 
                 <p>
-                    Ritrovo invitati<br>
-                    <strong>18:30</strong>
+                    Piazza Pergusa n.4<br>
+                    <strong>91016 Erice Casa Santa</strong>
                 </p>
 
+                <a
+                    class="map-btn"
+                    href="https://www.google.com/maps/search/?api=1&query=Piazza+Pergusa+4,+91016+Erice+Casa+Santa"
+                    target="_blank">
+
+                    🗺️ APRI GOOGLE MAPS
+
+                </a>
+
             </div>
+
 
         </div>
 
@@ -1047,7 +1154,7 @@ footer p {
 
         <p class="section-text">
             I colori ufficiali della festa:
-            mare, cielo, sabbia e luce.
+            mare, cielo, luce e sabbia.
         </p>
 
 
@@ -1059,7 +1166,7 @@ footer p {
                 onclick="openColor(
                     'DEEP SEA',
                     '#123C59',
-                    'Il blu profondo del mare al tramonto.'
+                    'Il blu profondo del mare.'
                 )">
 
                 <span class="color-name">
@@ -1078,7 +1185,7 @@ footer p {
                 onclick="openColor(
                     'OCEAN BLUE',
                     '#28749A',
-                    'Il blu dell’acqua quando il mare riflette il cielo.'
+                    'Il blu dell’acqua quando riflette il cielo.'
                 )">
 
                 <span class="color-name">
@@ -1097,7 +1204,7 @@ footer p {
                 onclick="openColor(
                     'SKY BLUE',
                     '#82C2DC',
-                    'Il colore del cielo in una giornata perfetta al mare.'
+                    'Il colore del cielo in una giornata perfetta.'
                 )">
 
                 <span class="color-name">
@@ -1116,7 +1223,7 @@ footer p {
                 onclick="openColor(
                     'PURE WHITE',
                     '#FFFFFF',
-                    'La luce, la semplicità e l’eleganza della festa.'
+                    'La luce e l’eleganza della festa.'
                 )">
 
                 <span class="color-name">
@@ -1135,7 +1242,7 @@ footer p {
                 onclick="openColor(
                     'WARM SAND',
                     '#D9C3A0',
-                    'Il colore della sabbia sotto i piedi.'
+                    'Il colore caldo della sabbia.'
                 )">
 
                 <span class="color-name">
@@ -1173,7 +1280,7 @@ footer p {
         </div>
 
         <h2 class="section-title">
-            Come ci vestiamo?
+            I colori della festa
         </h2>
 
         <div class="dress-colors">
@@ -1205,11 +1312,8 @@ footer p {
 
         </div>
 
-        <p class="dress-message">
+        <p class="dress-text">
             Blu · Bianco · Azzurro · Sabbia
-            <br><br>
-            “Vestiti come se stessi andando al mare...
-            anche se magari non ci vai.” 🌊
         </p>
 
     </div>
@@ -1218,259 +1322,104 @@ footer p {
 
 
 <!-- ==================================================
-     PROGRAMMA
+     CONFERMA PRESENZA
 ================================================== -->
 
-<section class="timeline-section">
+<section class="rsvp-section">
 
     <div class="container">
 
         <div class="section-label">
-            Programma
+            Organizzazione
         </div>
 
         <h2 class="section-title">
-            La serata
+            Ci sarai?
         </h2>
 
         <p class="section-text">
-            Una piccola anteprima di quello che succederà.
+            Per aiutarci a organizzare tutto al meglio,
+            conferma la tua presenza.
         </p>
 
 
-        <div class="timeline">
+        <div class="rsvp-card">
 
-
-            <div class="timeline-item">
-
-                <div class="timeline-dot"></div>
-
-                <div class="timeline-time">
-                    18:30
-                </div>
-
-                <div class="timeline-title">
-                    Arrivo degli invitati
-                </div>
-
-                <div class="timeline-text">
-                    Tutti pronti e soprattutto...
-                    nascosti!
-                </div>
-
-            </div>
-
-
-            <div class="timeline-item">
-
-                <div class="timeline-dot"></div>
-
-                <div class="timeline-time">
-                    19:00
-                </div>
-
-                <div class="timeline-title">
-                    Aperitivo
-                </div>
-
-                <div class="timeline-text">
-                    Si comincia a festeggiare.
-                </div>
-
-            </div>
-
-
-            <div class="timeline-item">
-
-                <div class="timeline-dot"></div>
-
-                <div class="timeline-time">
-                    20:00
-                </div>
-
-                <div class="timeline-title">
-                    Cena
-                </div>
-
-                <div class="timeline-text">
-                    Buon cibo, musica e compagnia.
-                </div>
-
-            </div>
-
-
-            <div class="timeline-item">
-
-                <div class="timeline-dot"></div>
-
-                <div class="timeline-time">
-                    21:30
-                </div>
-
-                <div class="timeline-title">
-                    🎂 LA SORPRESA
-                </div>
-
-                <div class="timeline-text">
-                    È arrivato il momento.
-                    Tutti pronti!
-                </div>
-
-            </div>
-
-
-            <div class="timeline-item">
-
-                <div class="timeline-dot"></div>
-
-                <div class="timeline-time">
-                    22:00
-                </div>
-
-                <div class="timeline-title">
-                    🎶 Festa
-                </div>
-
-                <div class="timeline-text">
-                    Da questo momento...
-                    niente più regole.
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ==================================================
-     COSA PORTARE
-================================================== -->
-
-<section class="bring-section">
-
-    <div class="container">
-
-        <div class="section-label">
-            Prima di uscire di casa
-        </div>
-
-        <h2 class="section-title">
-            Cosa portare
-        </h2>
-
-        <div class="bring-grid">
-
-            <div class="bring-card">
-
-                <div class="emoji">🎁</div>
-
-                <strong>Regalo</strong>
-
-                <span>
-                    Assolutamente sì
-                </span>
-
-            </div>
-
-
-            <div class="bring-card">
-
-                <div class="emoji">🥂</div>
-
-                <strong>Qualcosa da bere</strong>
-
-                <span>
-                    Se richiesto
-                </span>
-
-            </div>
-
-
-            <div class="bring-card">
-
-                <div class="emoji">📱</div>
-
-                <strong>Telefono</strong>
-
-                <span>
-                    Per le foto
-                </span>
-
-            </div>
-
-
-            <div class="bring-card">
-
-                <div class="emoji">🤫</div>
-
-                <strong>Segretezza</strong>
-
-                <span>
-                    Obbligatoria
-                </span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ==================================================
-     AREA SEGRETA
-================================================== -->
-
-<section class="secret-section">
-
-    <div class="container">
-
-        <div class="section-label">
-            Accesso riservato
-        </div>
-
-        <h2 class="section-title">
-            Area Top Secret
-        </h2>
-
-        <div class="secret-box">
-
-            <div class="lock">
-                🔐
+            <div class="rsvp-icon">
+                💌
             </div>
 
             <h3>
-                Solo per gli invitati
+                Conferma la tua presenza
             </h3>
 
             <p>
-                Qui possiamo mettere le informazioni
-                che non devono essere visibili immediatamente.
+                Clicca sul pulsante qui sotto e
+                manda un messaggio all'organizzatore.
             </p>
 
-            <button
-                class="secret-btn"
-                onclick="showSecret()">
 
-                🔓 APRI AREA SEGRETA
+            <!--
+            IMPORTANTE:
+            Sostituisci 393XXXXXXXXX
+            con il numero WhatsApp dell'organizzatore.
 
-            </button>
+            Esempio:
+            393331234567
+            -->
 
-            <p
-                id="secret-message"
-                style="
-                    display:none;
-                    margin-top:20px;
-                    color:white;
-                ">
+            <a
+                class="whatsapp-btn"
+                href="https://wa.me/393XXXXXXXXX?text=Ciao!%20Confermo%20la%20mia%20presenza%20alla%20festa%20di%20Marta%20%F0%9F%8C%8A"
+                target="_blank">
 
-                🤫 Informazioni segrete da inserire...
+                💬 CONFERMA SU WHATSAPP
 
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     REGOLA D'ORO
+================================================== -->
+
+<section class="secret-rule">
+
+    <div class="container">
+
+        <div class="section-label">
+            Importantissimo
+        </div>
+
+        <h2 class="section-title">
+            La regola d'oro
+        </h2>
+
+
+        <div class="secret-rule-card">
+
+            <div class="big-lock">
+                🤫
+            </div>
+
+            <h3>
+                Marta non deve sapere nulla.
+            </h3>
+
+            <p>
+                Questa pagina è stata creata per organizzare
+                la sua sorpresa.
+
+                <br><br>
+
+                Quindi niente messaggi strani,
+                niente spoiler e soprattutto...
+                niente screenshot da mandarle. 😂
             </p>
 
         </div>
@@ -1486,20 +1435,20 @@ footer p {
 
 <footer>
 
-    <div class="footer-heart">
+    <div class="footer-icon">
         🌊
     </div>
 
     <h3>
-        Per una serata speciale
+        Marta Birthday
     </h3>
 
     <p>
-        Marta Birthday · 25 Agosto 2026
+        25 Agosto 2026 · Erice
     </p>
 
     <p style="margin-top:20px;">
-        🤫 Questa pagina è top secret.
+        Una sorpresa tutta da vivere.
     </p>
 
 </footer>
@@ -1546,19 +1495,20 @@ footer p {
 
 /* ==================================================
    COUNTDOWN
-
-   DATA DELLA FESTA
-   Modifica qui se serve.
 ================================================== */
 
-const festa = new Date("August 25, 2026 21:30:00").getTime();
+const festa =
+    new Date("August 25, 2026 20:00:00").getTime();
 
 
 function aggiornaCountdown() {
 
-    const adesso = new Date().getTime();
+    const adesso =
+        new Date().getTime();
 
-    const differenza = festa - adesso;
+    const differenza =
+        festa - adesso;
+
 
     if (differenza <= 0) {
 
@@ -1571,34 +1521,48 @@ function aggiornaCountdown() {
     }
 
 
-    const giorni = Math.floor(
-        differenza / (1000 * 60 * 60 * 24)
-    );
+    const giorni =
+        Math.floor(
+            differenza /
+            (1000 * 60 * 60 * 24)
+        );
 
-    const ore = Math.floor(
-        (differenza % (1000 * 60 * 60 * 24))
-        / (1000 * 60 * 60)
-    );
 
-    const minuti = Math.floor(
-        (differenza % (1000 * 60 * 60))
-        / (1000 * 60)
-    );
+    const ore =
+        Math.floor(
+            (differenza %
+            (1000 * 60 * 60 * 24)) /
+            (1000 * 60 * 60)
+        );
 
-    const secondi = Math.floor(
-        (differenza % (1000 * 60))
-        / 1000
-    );
+
+    const minuti =
+        Math.floor(
+            (differenza %
+            (1000 * 60 * 60)) /
+            (1000 * 60)
+        );
+
+
+    const secondi =
+        Math.floor(
+            (differenza %
+            (1000 * 60)) /
+            1000
+        );
 
 
     document.getElementById("days").textContent =
         String(giorni).padStart(2,"0");
 
+
     document.getElementById("hours").textContent =
         String(ore).padStart(2,"0");
 
+
     document.getElementById("minutes").textContent =
         String(minuti).padStart(2,"0");
+
 
     document.getElementById("seconds").textContent =
         String(secondi).padStart(2,"0");
@@ -1608,26 +1572,40 @@ function aggiornaCountdown() {
 
 aggiornaCountdown();
 
-setInterval(aggiornaCountdown,1000);
+setInterval(
+    aggiornaCountdown,
+    1000
+);
 
 
 /* ==================================================
-   PALETTE
+   PALETTE INTERATTIVA
 ================================================== */
 
-function openColor(nome,colore,descrizione) {
+function openColor(
+    nome,
+    colore,
+    descrizione
+) {
 
-    document.getElementById("modalName").textContent =
-        nome;
+    document.getElementById(
+        "modalName"
+    ).textContent = nome;
 
-    document.getElementById("modalDescription").textContent =
-        descrizione;
 
-    document.getElementById("modalColor").style.background =
-        colore;
+    document.getElementById(
+        "modalDescription"
+    ).textContent = descrizione;
 
-    document.getElementById("colorModal")
-        .classList.add("active");
+
+    document.getElementById(
+        "modalColor"
+    ).style.background = colore;
+
+
+    document.getElementById(
+        "colorModal"
+    ).classList.add("active");
 
 }
 
@@ -1640,30 +1618,9 @@ function closeColor(event) {
         event.target.classList.contains("close-modal")
     ) {
 
-        document.getElementById("colorModal")
-            .classList.remove("active");
-
-    }
-
-}
-
-
-/* ==================================================
-   AREA SEGRETA
-================================================== */
-
-function showSecret() {
-
-    const messaggio =
-        document.getElementById("secret-message");
-
-    if (messaggio.style.display === "none") {
-
-        messaggio.style.display = "block";
-
-    } else {
-
-        messaggio.style.display = "none";
+        document.getElementById(
+            "colorModal"
+        ).classList.remove("active");
 
     }
 
