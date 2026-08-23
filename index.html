@@ -193,11 +193,6 @@ section {
     opacity: .8;
 }
 
-
-/* =====================================================
-   ONDE
-===================================================== */
-
 .wave {
     position: absolute;
     left: -10%;
@@ -565,7 +560,7 @@ section {
 
 
 /* =====================================================
-   CONFERMA PRESENZA
+   RSVP
 ===================================================== */
 
 .rsvp-section {
@@ -649,7 +644,7 @@ section {
 
 
 /* =====================================================
-   SCELTA PRESENZA
+   PRESENZA
 ===================================================== */
 
 .presence-options {
@@ -696,7 +691,7 @@ section {
 
 
 /* =====================================================
-   CAMPO PERSONE EXTRA
+   NUMERO PERSONE
 ===================================================== */
 
 #numeroPersoneExtra {
@@ -720,7 +715,7 @@ section {
 
 
 /* =====================================================
-   BOTTONE CONFERMA
+   BOTTONE
 ===================================================== */
 
 .confirm-btn {
@@ -755,7 +750,7 @@ section {
 
 
 /* =====================================================
-   CONFERMA RIUSCITA
+   CONFERMA
 ===================================================== */
 
 .confirmed {
@@ -788,7 +783,7 @@ section {
 
 
 /* =====================================================
-   REGOLA D'ORO
+   REGOLA SEGRETA
 ===================================================== */
 
 .secret-rule {
@@ -957,7 +952,6 @@ footer p {
                 </div>
             </div>
 
-
             <div class="time-box">
                 <div class="time-number" id="hours">
                     00
@@ -968,7 +962,6 @@ footer p {
                 </div>
             </div>
 
-
             <div class="time-box">
                 <div class="time-number" id="minutes">
                     00
@@ -978,7 +971,6 @@ footer p {
                     Minuti
                 </div>
             </div>
-
 
             <div class="time-box">
                 <div class="time-number" id="seconds">
@@ -1083,7 +1075,6 @@ footer p {
 
         <div class="info-grid">
 
-
             <div class="info-card">
 
                 <div class="info-icon">
@@ -1178,7 +1169,6 @@ footer p {
 
 
         <div class="palette-wrapper">
-
 
             <div
                 class="color-strip deep-sea"
@@ -1375,7 +1365,9 @@ footer p {
 
             <p>
                 Compila il modulo qui sotto.
-                La tua risposta verrà registrata.
+                <br>
+                Al termine si aprirà WhatsApp
+                con la conferma già pronta.
             </p>
 
 
@@ -1383,8 +1375,6 @@ footer p {
                 id="rsvpForm"
                 onsubmit="submitRSVP(event)">
 
-
-                <!-- NOME -->
 
                 <div class="form-group">
 
@@ -1400,8 +1390,6 @@ footer p {
 
                 </div>
 
-
-                <!-- PRESENZA -->
 
                 <div class="form-group">
 
@@ -1449,9 +1437,9 @@ footer p {
                 </div>
 
 
-                <!-- NUMERO PERSONE -->
-
-                <div class="form-group">
+                <div
+                    class="form-group"
+                    id="gruppoPersone">
 
                     <label for="persone">
                         Quante persone sarete?
@@ -1486,12 +1474,9 @@ footer p {
                 </div>
 
 
-                <!-- NUMERO PERSONALIZZATO -->
-
                 <div
                     class="form-group"
-                    id="numeroPersoneExtra"
-                    style="display:none;">
+                    id="numeroPersoneExtra">
 
                     <label for="personeCustom">
                         Quante persone sarete in totale?
@@ -1501,12 +1486,11 @@ footer p {
                         type="number"
                         id="personeCustom"
                         min="5"
+                        max="100"
                         placeholder="Es. 7">
 
                 </div>
 
-
-                <!-- NOTE -->
 
                 <div class="form-group">
 
@@ -1521,13 +1505,11 @@ footer p {
                 </div>
 
 
-                <!-- BOTTONE -->
-
                 <button
                     type="submit"
                     class="confirm-btn">
 
-                    🌊 CONFERMA PRESENZA
+                    📲 INVIA CONFERMA SU WHATSAPP
 
                 </button>
 
@@ -1535,27 +1517,25 @@ footer p {
             </form>
 
 
-            <!-- CONFERMA AVVENUTA -->
-
             <div
                 class="confirmed"
                 id="confirmed">
 
                 <div class="confirmed-icon">
-                    🎉
+                    🌊
                 </div>
 
                 <h3>
-                    Presenza registrata!
+                    Quasi fatto!
                 </h3>
 
                 <p>
-                    Grazie per aver confermato.
+                    WhatsApp si aprirà con il messaggio
+                    già compilato.
                     <br><br>
-                    Ci vediamo alla festa di Marta.
-                    <br>
-                    🤫 E ricordati...
-                    è una sorpresa!
+                    Devi solo premere <strong>Invia</strong>.
+                    <br><br>
+                    🤫 E ricordati di mantenere il segreto!
                 </p>
 
             </div>
@@ -1676,6 +1656,32 @@ footer p {
 
 
 <script>
+
+/* =====================================================
+   NUMERO WHATSAPP
+===================================================== */
+
+/*
+   IMPORTANTE:
+
+   SOSTITUISCI SOLO QUESTA PARTE:
+
+   393XXXXXXXXX
+
+   con il numero WhatsApp che deve ricevere
+   le conferme.
+
+   ESEMPIO:
+
+   const numeroWhatsApp = "393331234567";
+
+   NON mettere:
+   +
+   spazi
+   trattini
+*/
+
+const numeroWhatsApp = "393515446656";
 
 
 /* =====================================================
@@ -1867,7 +1873,64 @@ function gestisciNumeroPersone() {
 
 
 /* =====================================================
-   CONFERMA PRESENZA
+   QUANDO SCELGONO "NON POSSO"
+===================================================== */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
+
+        const radioSi =
+            document.getElementById("si");
+
+        const radioNo =
+            document.getElementById("no");
+
+        const gruppoPersone =
+            document.getElementById(
+                "gruppoPersone"
+            );
+
+        const numeroExtra =
+            document.getElementById(
+                "numeroPersoneExtra"
+            );
+
+
+        radioSi.addEventListener(
+            "change",
+            function() {
+
+                gruppoPersone.style.display =
+                    "block";
+
+            }
+        );
+
+
+        radioNo.addEventListener(
+            "change",
+            function() {
+
+                gruppoPersone.style.display =
+                    "none";
+
+                numeroExtra.style.display =
+                    "none";
+
+                document.getElementById(
+                    "personeCustom"
+                ).required = false;
+
+            }
+        );
+
+    }
+);
+
+
+/* =====================================================
+   INVIO WHATSAPP
 ===================================================== */
 
 function submitRSVP(event) {
@@ -1875,55 +1938,98 @@ function submitRSVP(event) {
     event.preventDefault();
 
 
+    /* -----------------------------------------------
+       CONTROLLO NUMERO
+    ------------------------------------------------ */
+
+    if (
+        !numeroWhatsApp ||
+        numeroWhatsApp.includes("X")
+    ) {
+
+        alert(
+            "Il numero WhatsApp non è ancora stato inserito nel codice."
+        );
+
+        return;
+
+    }
+
+
+    /* -----------------------------------------------
+       DATI
+    ------------------------------------------------ */
+
     const nome =
         document.getElementById(
             "nome"
         ).value.trim();
 
 
-    const presenza =
+    const presenzaElemento =
         document.querySelector(
             'input[name="presenza"]:checked'
-        ).value;
+        );
+
+
+    if (!presenzaElemento) {
+
+        alert(
+            "Seleziona se parteciperai alla festa."
+        );
+
+        return;
+
+    }
+
+
+    const presenza =
+        presenzaElemento.value;
 
 
     let persone =
-        document.getElementById(
-            "persone"
-        ).value;
+        "1";
 
 
-    /*
-       Se viene scelto
-       "Più di 3 persone",
-       prendiamo il numero
-       scritto dall'utente.
-    */
+    if (presenza === "SI") {
 
-    if (persone === "more") {
-
-        const personeCustom =
+        const scelta =
             document.getElementById(
-                "personeCustom"
+                "persone"
             ).value;
 
 
-        if (
-            !personeCustom ||
-            Number(personeCustom) < 5
-        ) {
+        if (scelta === "more") {
 
-            alert(
-                "Inserisci il numero totale delle persone."
-            );
+            const personeCustom =
+                document.getElementById(
+                    "personeCustom"
+                ).value;
 
-            return;
+
+            if (
+                !personeCustom ||
+                Number(personeCustom) < 5
+            ) {
+
+                alert(
+                    "Inserisci il numero totale delle persone."
+                );
+
+                return;
+
+            }
+
+
+            persone =
+                personeCustom;
+
+        } else {
+
+            persone =
+                scelta;
 
         }
-
-
-        persone =
-            personeCustom + " persone";
 
     }
 
@@ -1934,79 +2040,93 @@ function submitRSVP(event) {
         ).value.trim();
 
 
-    const risposta = {
+    /* -----------------------------------------------
+       TESTO WHATSAPP
+    ------------------------------------------------ */
 
-        nome: nome,
-
-        presenza: presenza,
-
-        persone: persone,
-
-        note: note,
-
-        data:
-            new Date().toLocaleString(
-                "it-IT"
-            )
-
-    };
+    let messaggio = "";
 
 
-    /*
-       SALVATAGGIO TEMPORANEO LOCALE
+    messaggio +=
+        "🎉 *CONFERMA FESTA DI MARTA* 🎉\n\n";
 
-       Per ora la risposta viene salvata
-       nel browser del dispositivo.
 
-       Successivamente possiamo collegare
-       questa funzione a un database online,
-       così tutte le risposte arriveranno
-       a te.
-    */
+    messaggio +=
+        "👤 *Nome:* " +
+        nome +
+        "\n";
 
-    const risposte =
-        JSON.parse(
-            localStorage.getItem(
-                "marta_rsvp"
-            ) || "[]"
+
+    if (presenza === "SI") {
+
+        messaggio +=
+            "✅ *Presenza:* SÌ\n";
+
+
+        messaggio +=
+            "👥 *Persone totali:* " +
+            persone +
+            "\n";
+
+    } else {
+
+        messaggio +=
+            "❌ *Presenza:* NON POSSO\n";
+
+    }
+
+
+    if (note !== "") {
+
+        messaggio +=
+            "📝 *Note:* " +
+            note +
+            "\n";
+
+    }
+
+
+    messaggio +=
+        "\n🌊 Marta Birthday · 25 Agosto 2026";
+
+
+    /* -----------------------------------------------
+       CREA LINK WHATSAPP
+    ------------------------------------------------ */
+
+    const messaggioCodificato =
+        encodeURIComponent(
+            messaggio
         );
 
 
-    risposte.push(risposta);
+    const urlWhatsApp =
+        "https://wa.me/" +
+        numeroWhatsApp +
+        "?text=" +
+        messaggioCodificato;
 
 
-    localStorage.setItem(
-        "marta_rsvp",
-        JSON.stringify(risposte)
-    );
+    /* -----------------------------------------------
+       APRE WHATSAPP
+    ------------------------------------------------ */
+
+    window.location.href =
+        urlWhatsApp;
 
 
-    /* NASCONDE IL FORM */
+    /* -----------------------------------------------
+       MOSTRA CONFERMA
+    ------------------------------------------------ */
 
     document.getElementById(
         "rsvpForm"
     ).style.display = "none";
 
 
-    /* MOSTRA LA CONFERMA */
-
     document.getElementById(
         "confirmed"
     ).classList.add("active");
-
-
-    /* SCROLL AUTOMATICO */
-
-    setTimeout(() => {
-
-        document.getElementById(
-            "confirmed"
-        ).scrollIntoView({
-            behavior: "smooth",
-            block: "center"
-        });
-
-    }, 100);
 
 }
 
