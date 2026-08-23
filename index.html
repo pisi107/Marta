@@ -41,7 +41,6 @@ body {
         Roboto,
         Arial,
         sans-serif;
-
     color: var(--text);
     background: #eef8fb;
     overflow-x: hidden;
@@ -91,16 +90,12 @@ section {
 
 .hero {
     min-height: 100svh;
-
     position: relative;
     overflow: hidden;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     text-align: center;
-
     padding: 40px 25px 100px;
 
     background:
@@ -115,120 +110,73 @@ section {
 
 .sun {
     position: absolute;
-
     top: 70px;
     right: 12%;
-
     width: 90px;
     height: 90px;
-
     border-radius: 50%;
-
     background: rgba(255,255,255,.55);
-
-    box-shadow:
-        0 0 60px rgba(255,255,255,.4);
+    box-shadow: 0 0 60px rgba(255,255,255,.4);
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-
     max-width: 650px;
 }
 
 .secret-label {
     display: inline-block;
-
     padding: 9px 18px;
-
     border-radius: 50px;
-
     background: rgba(255,255,255,.18);
-
-    border:
-        1px solid rgba(255,255,255,.5);
-
+    border: 1px solid rgba(255,255,255,.5);
     color: white;
-
     font-size: 11px;
     font-weight: 700;
-
     letter-spacing: 2px;
-
     backdrop-filter: blur(10px);
-
     margin-bottom: 25px;
 }
 
 .hero h1 {
     color: white;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size:
-        clamp(50px, 15vw, 90px);
-
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(50px, 15vw, 90px);
     line-height: .95;
-
     font-weight: 400;
-
-    text-shadow:
-        0 8px 25px rgba(0,0,0,.15);
-
+    text-shadow: 0 8px 25px rgba(0,0,0,.15);
     margin-bottom: 22px;
 }
 
 .hero h1 span {
     display: block;
-
     font-size: .52em;
-
     font-style: italic;
-
     margin-top: 12px;
 }
 
 .hero-subtitle {
     color: rgba(255,255,255,.92);
-
     font-size: 16px;
-
     line-height: 1.7;
-
     max-width: 420px;
-
     margin: auto;
 }
 
 .enter-btn {
     display: inline-flex;
-
     align-items: center;
     justify-content: center;
-
     margin-top: 35px;
-
     padding: 16px 28px;
-
     border-radius: 50px;
-
     background: white;
-
     color: var(--deep);
-
     text-decoration: none;
-
     font-size: 13px;
-
     font-weight: 800;
-
-    box-shadow:
-        0 15px 35px rgba(0,0,0,.18);
-
+    box-shadow: 0 15px 35px rgba(0,0,0,.18);
     transition: .2s;
 }
 
@@ -238,15 +186,10 @@ section {
 
 .scroll {
     position: absolute;
-
     bottom: 28px;
-
     color: white;
-
     font-size: 11px;
-
     letter-spacing: 2px;
-
     opacity: .8;
 }
 
@@ -257,19 +200,12 @@ section {
 
 .wave {
     position: absolute;
-
     left: -10%;
-
     width: 120%;
     height: 75px;
-
     border-radius: 50%;
-
-    background:
-        rgba(255,255,255,.23);
-
-    animation:
-        wave 8s ease-in-out infinite;
+    background: rgba(255,255,255,.23);
+    animation: wave 8s ease-in-out infinite;
 }
 
 .wave.one {
@@ -278,14 +214,11 @@ section {
 
 .wave.two {
     bottom: -55px;
-
     opacity: .45;
-
     animation-delay: -3s;
 }
 
 @keyframes wave {
-
     0%,100% {
         transform: translateX(-2%);
     }
@@ -293,7 +226,6 @@ section {
     50% {
         transform: translateX(2%);
     }
-
 }
 
 
@@ -306,52 +238,31 @@ section {
 }
 
 .countdown {
-
     display: grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
+    grid-template-columns: repeat(4, 1fr);
     gap: 9px;
-
     margin-top: 35px;
 }
 
 .time-box {
-
-    background:
-        rgba(255,255,255,.8);
-
+    background: rgba(255,255,255,.8);
     border-radius: 18px;
-
     padding: 18px 5px;
-
     text-align: center;
-
-    box-shadow:
-        0 8px 25px
-        rgba(100,70,40,.08);
+    box-shadow: 0 8px 25px rgba(100,70,40,.08);
 }
 
 .time-number {
-
     font-size: 28px;
-
     font-weight: 800;
-
     color: var(--deep);
 }
 
 .time-label {
-
     margin-top: 5px;
-
     font-size: 9px;
-
     text-transform: uppercase;
-
     letter-spacing: 1px;
-
     color: #71828a;
 }
 
@@ -365,11 +276,8 @@ section {
 }
 
 .mission-card {
-
     margin-top: 35px;
-
     padding: 30px 25px;
-
     border-radius: 28px;
 
     background:
@@ -379,64 +287,41 @@ section {
             #e5f4f8
         );
 
-    box-shadow:
-        0 18px 50px
-        rgba(18,60,89,.12);
+    box-shadow: 0 18px 50px rgba(18,60,89,.12);
 
-    border:
-        1px solid
-        rgba(35,101,138,.08);
-
+    border: 1px solid rgba(35,101,138,.08);
     text-align: center;
 }
 
 .mission-icon {
-
     font-size: 43px;
-
     margin-bottom: 15px;
 }
 
 .mission-card h3 {
-
     font-family: Georgia, serif;
-
     font-size: 26px;
-
     color: var(--deep);
-
     margin-bottom: 15px;
 }
 
 .mission-card p {
-
     line-height: 1.7;
-
     color: var(--gray);
 }
 
 .rules {
-
     display: grid;
-
     gap: 10px;
-
     margin-top: 25px;
 }
 
 .rule {
-
     background: white;
-
     border-radius: 14px;
-
     padding: 14px;
-
     font-size: 14px;
-
-    box-shadow:
-        0 5px 15px
-        rgba(0,0,0,.04);
+    box-shadow: 0 5px 15px rgba(0,0,0,.04);
 }
 
 
@@ -445,7 +330,6 @@ section {
 ===================================================== */
 
 .info-section {
-
     background:
         linear-gradient(
             180deg,
@@ -455,68 +339,43 @@ section {
 }
 
 .info-grid {
-
     display: grid;
-
     gap: 15px;
-
     margin-top: 35px;
 }
 
 .info-card {
-
     background: white;
-
     border-radius: 22px;
-
     padding: 24px;
-
-    box-shadow:
-        0 10px 30px
-        rgba(35,101,138,.09);
+    box-shadow: 0 10px 30px rgba(35,101,138,.09);
 }
 
 .info-icon {
-
     font-size: 30px;
-
     margin-bottom: 12px;
 }
 
 .info-card h3 {
-
     font-size: 17px;
-
     margin-bottom: 8px;
 }
 
 .info-card p {
-
     color: var(--gray);
-
     line-height: 1.65;
-
     font-size: 14px;
 }
 
 .map-btn {
-
     display: inline-block;
-
     margin-top: 14px;
-
     padding: 11px 18px;
-
     background: var(--blue);
-
     color: white;
-
     border-radius: 50px;
-
     text-decoration: none;
-
     font-size: 12px;
-
     font-weight: 800;
 }
 
@@ -526,129 +385,88 @@ section {
 ===================================================== */
 
 .palette-section {
-
     background: var(--deep);
-
     color: white;
-
     overflow: hidden;
 }
 
 .palette-section .section-label {
-
     color: var(--sky);
 }
 
 .palette-section .section-title {
-
     color: white;
 }
 
 .palette-section .section-text {
-
-    color:
-        rgba(255,255,255,.72);
+    color: rgba(255,255,255,.72);
 }
 
 .palette-wrapper {
-
     display: flex;
-
     flex-direction: column;
-
     gap: 8px;
-
     max-width: 650px;
-
-    margin:
-        40px auto 0;
+    margin: 40px auto 0;
 }
 
 .color-strip {
-
     min-height: 105px;
-
     border-radius: 5px;
-
     padding: 18px 20px;
 
     display: flex;
-
     align-items: flex-end;
-
     justify-content: space-between;
 
     cursor: pointer;
-
     transition: .25s;
 
-    box-shadow:
-        0 8px 20px
-        rgba(0,0,0,.15);
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
 }
 
 .color-strip:active {
-
-    transform:
-        scale(.98);
+    transform: scale(.98);
 }
 
 .color-name {
-
     font-weight: 800;
-
     letter-spacing: 1px;
-
     font-size: 14px;
 }
 
 .color-code {
-
     font-size: 11px;
-
     opacity: .8;
 }
 
 .deep-sea {
-
     background: #123c59;
 }
 
 .ocean-blue {
-
     background: #28749a;
 }
 
 .sky-blue {
-
     background: #82c2dc;
-
     color: #17384d;
 }
 
 .white-color {
-
     background: white;
-
     color: #17384d;
 }
 
 .sand {
-
     background: #d9c3a0;
-
     color: #17384d;
 }
 
 .palette-note {
-
     text-align: center;
-
     margin-top: 25px;
-
-    color:
-        rgba(255,255,255,.55);
-
+    color: rgba(255,255,255,.55);
     font-size: 11px;
 }
 
@@ -658,93 +476,58 @@ section {
 ===================================================== */
 
 .color-modal {
-
     position: fixed;
-
     inset: 0;
-
-    background:
-        rgba(8,35,51,.75);
-
-    backdrop-filter:
-        blur(10px);
+    background: rgba(8,35,51,.75);
+    backdrop-filter: blur(10px);
 
     display: none;
-
     align-items: center;
-
     justify-content: center;
 
     z-index: 1000;
-
     padding: 25px;
 }
 
 .color-modal.active {
-
     display: flex;
 }
 
 .modal-box {
-
     width: 100%;
-
     max-width: 400px;
-
     background: white;
-
     border-radius: 28px;
-
     padding: 25px;
-
-    box-shadow:
-        0 25px 70px
-        rgba(0,0,0,.25);
+    box-shadow: 0 25px 70px rgba(0,0,0,.25);
 }
 
 .modal-color {
-
     height: 150px;
-
     border-radius: 18px;
-
     margin-bottom: 22px;
 }
 
 .modal-box h3 {
-
     font-family: Georgia, serif;
-
     font-size: 28px;
-
     color: var(--deep);
 }
 
 .modal-box p {
-
     margin-top: 8px;
-
     color: var(--gray);
-
     line-height: 1.6;
 }
 
 .close-modal {
-
     margin-top: 22px;
-
     width: 100%;
-
     border: 0;
-
     padding: 13px;
-
     border-radius: 50px;
-
     background: var(--deep);
-
     color: white;
-
     font-weight: 700;
 }
 
@@ -754,46 +537,29 @@ section {
 ===================================================== */
 
 .dress-section {
-
     background: #f7f1e8;
 }
 
 .dress-colors {
-
     display: flex;
-
     justify-content: center;
-
     gap: 10px;
-
     margin: 30px auto;
 }
 
 .dress-color {
-
     width: 50px;
-
     height: 50px;
-
     border-radius: 50%;
-
     border: 4px solid white;
-
-    box-shadow:
-        0 5px 15px
-        rgba(0,0,0,.12);
+    box-shadow: 0 5px 15px rgba(0,0,0,.12);
 }
 
 .dress-text {
-
     text-align: center;
-
     font-family: Georgia, serif;
-
     font-size: 25px;
-
     color: var(--deep);
-
     line-height: 1.5;
 }
 
@@ -803,7 +569,6 @@ section {
 ===================================================== */
 
 .rsvp-section {
-
     background:
         linear-gradient(
             180deg,
@@ -813,195 +578,155 @@ section {
 }
 
 .rsvp-card {
-
     margin-top: 35px;
-
     padding: 35px 25px;
-
     border-radius: 28px;
-
     background: white;
-
-    box-shadow:
-        0 15px 45px
-        rgba(35,101,138,.1);
+    box-shadow: 0 15px 45px rgba(35,101,138,.1);
 }
 
 .rsvp-icon {
-
     text-align: center;
-
     font-size: 42px;
-
     margin-bottom: 15px;
 }
 
 .rsvp-card h3 {
-
     text-align: center;
-
     font-family: Georgia, serif;
-
     font-size: 27px;
-
     color: var(--deep);
-
     margin-bottom: 12px;
 }
 
 .rsvp-card > p {
-
     text-align: center;
-
     color: var(--gray);
-
     line-height: 1.7;
-
     font-size: 14px;
-
     margin-bottom: 28px;
 }
 
 .form-group {
-
     margin-bottom: 18px;
 }
 
 .form-group label {
-
     display: block;
-
     margin-bottom: 7px;
-
     font-size: 12px;
-
     font-weight: 800;
-
     color: var(--deep);
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
-
     width: 100%;
-
     border: 1px solid #d5e5eb;
-
     background: #f8fcfd;
-
     border-radius: 14px;
-
     padding: 14px;
-
     font-family: inherit;
-
     font-size: 15px;
-
     color: var(--text);
-
     outline: none;
-
     transition: .2s;
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-
     border-color: var(--sky);
-
     background: white;
-
-    box-shadow:
-        0 0 0 3px
-        rgba(130,194,220,.15);
+    box-shadow: 0 0 0 3px rgba(130,194,220,.15);
 }
 
 .form-group textarea {
-
     min-height: 85px;
-
     resize: vertical;
 }
 
 
-/* SCELTA PRESENZA */
+/* =====================================================
+   SCELTA PRESENZA
+===================================================== */
 
 .presence-options {
-
     display: grid;
-
     grid-template-columns: 1fr 1fr;
-
     gap: 10px;
 }
 
 .presence-option {
-
     position: relative;
 }
 
 .presence-option input {
-
     position: absolute;
-
     opacity: 0;
 }
 
 .presence-option label {
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     text-align: center;
 
     min-height: 60px;
-
     padding: 10px;
 
     border-radius: 15px;
-
-    border:
-        1px solid #d5e5eb;
-
+    border: 1px solid #d5e5eb;
     background: #f8fcfd;
 
     cursor: pointer;
 
     font-size: 13px;
-
     font-weight: 700;
 
     transition: .2s;
 }
 
 .presence-option input:checked + label {
-
-    border-color:
-        var(--success);
-
-    background:
-        #e8f6ef;
-
-    color:
-        #277052;
+    border-color: var(--success);
+    background: #e8f6ef;
+    color: #277052;
 }
 
 
-/* INVIO */
+/* =====================================================
+   CAMPO PERSONE EXTRA
+===================================================== */
+
+#numeroPersoneExtra {
+    display: none;
+    animation: apparizione .25s ease;
+}
+
+@keyframes apparizione {
+
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   BOTTONE CONFERMA
+===================================================== */
 
 .confirm-btn {
-
     width: 100%;
-
     border: none;
-
     border-radius: 50px;
-
     padding: 16px;
 
     background:
@@ -1012,9 +737,7 @@ section {
         );
 
     color: white;
-
     font-size: 14px;
-
     font-weight: 800;
 
     cursor: pointer;
@@ -1027,52 +750,39 @@ section {
 }
 
 .confirm-btn:active {
-
-    transform:
-        scale(.98);
+    transform: scale(.98);
 }
 
 
-/* CONFERMA RIUSCITA */
+/* =====================================================
+   CONFERMA RIUSCITA
+===================================================== */
 
 .confirmed {
-
     display: none;
-
     text-align: center;
-
     padding: 20px 5px;
 }
 
 .confirmed.active {
-
     display: block;
 }
 
 .confirmed-icon {
-
     font-size: 60px;
-
     margin-bottom: 15px;
 }
 
 .confirmed h3 {
-
     font-family: Georgia, serif;
-
     font-size: 29px;
-
     color: var(--deep);
-
     margin-bottom: 10px;
 }
 
 .confirmed p {
-
     color: var(--gray);
-
     line-height: 1.7;
-
     font-size: 14px;
 }
 
@@ -1082,61 +792,40 @@ section {
 ===================================================== */
 
 .secret-rule {
-
     background: var(--deep);
-
     color: white;
 }
 
 .secret-rule .section-label {
-
     color: var(--sky);
 }
 
 .secret-rule .section-title {
-
     color: white;
 }
 
 .secret-rule-card {
-
     margin-top: 35px;
-
     padding: 40px 25px;
-
     border-radius: 28px;
-
-    background:
-        rgba(255,255,255,.05);
-
-    border:
-        1px solid
-        rgba(255,255,255,.12);
-
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.12);
     text-align: center;
 }
 
 .big-lock {
-
     font-size: 48px;
-
     margin-bottom: 18px;
 }
 
 .secret-rule-card h3 {
-
     font-family: Georgia, serif;
-
     font-size: 28px;
-
     margin-bottom: 12px;
 }
 
 .secret-rule-card p {
-
-    color:
-        rgba(255,255,255,.7);
-
+    color: rgba(255,255,255,.7);
     line-height: 1.7;
 }
 
@@ -1146,39 +835,26 @@ section {
 ===================================================== */
 
 footer {
-
     padding: 55px 20px;
-
     background: #0b2738;
-
-    color:
-        rgba(255,255,255,.7);
-
+    color: rgba(255,255,255,.7);
     text-align: center;
 }
 
 .footer-icon {
-
     font-size: 35px;
-
     margin-bottom: 15px;
 }
 
 footer h3 {
-
     color: white;
-
     font-family: Georgia, serif;
-
     font-size: 25px;
-
     font-weight: 400;
 }
 
 footer p {
-
     margin-top: 10px;
-
     font-size: 12px;
 }
 
@@ -1190,9 +866,7 @@ footer p {
 @media (min-width: 700px) {
 
     .info-grid {
-
-        grid-template-columns:
-            repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
 }
@@ -1274,9 +948,7 @@ footer p {
         <div class="countdown">
 
             <div class="time-box">
-                <div
-                    class="time-number"
-                    id="days">
+                <div class="time-number" id="days">
                     00
                 </div>
 
@@ -1287,9 +959,7 @@ footer p {
 
 
             <div class="time-box">
-                <div
-                    class="time-number"
-                    id="hours">
+                <div class="time-number" id="hours">
                     00
                 </div>
 
@@ -1300,9 +970,7 @@ footer p {
 
 
             <div class="time-box">
-                <div
-                    class="time-number"
-                    id="minutes">
+                <div class="time-number" id="minutes">
                     00
                 </div>
 
@@ -1313,9 +981,7 @@ footer p {
 
 
             <div class="time-box">
-                <div
-                    class="time-number"
-                    id="seconds">
+                <div class="time-number" id="seconds">
                     00
                 </div>
 
@@ -1699,16 +1365,13 @@ footer p {
 
         <div class="rsvp-card">
 
-
             <div class="rsvp-icon">
                 💌
             </div>
 
-
             <h3>
                 Ci sarai?
             </h3>
-
 
             <p>
                 Compila il modulo qui sotto.
@@ -1786,15 +1449,17 @@ footer p {
                 </div>
 
 
-                <!-- PERSONE AGGIUNTIVE -->
+                <!-- NUMERO PERSONE -->
 
                 <div class="form-group">
 
                     <label for="persone">
-                        Numero di persone
+                        Quante persone sarete?
                     </label>
 
-                    <select id="persone">
+                    <select
+                        id="persone"
+                        onchange="gestisciNumeroPersone()">
 
                         <option value="1">
                             Solo io
@@ -1812,7 +1477,31 @@ footer p {
                             Io + 3 persone
                         </option>
 
+                        <option value="more">
+                            👥 Più di 3 persone
+                        </option>
+
                     </select>
+
+                </div>
+
+
+                <!-- NUMERO PERSONALIZZATO -->
+
+                <div
+                    class="form-group"
+                    id="numeroPersoneExtra"
+                    style="display:none;">
+
+                    <label for="personeCustom">
+                        Quante persone sarete in totale?
+                    </label>
+
+                    <input
+                        type="number"
+                        id="personeCustom"
+                        min="5"
+                        placeholder="Es. 7">
 
                 </div>
 
@@ -1827,11 +1516,12 @@ footer p {
 
                     <textarea
                         id="note"
-                        placeholder="Scrivi qui eventuali informazioni...">
-                    </textarea>
+                        placeholder="Scrivi qui eventuali informazioni..."></textarea>
 
                 </div>
 
+
+                <!-- BOTTONE -->
 
                 <button
                     type="submit"
@@ -1845,7 +1535,7 @@ footer p {
             </form>
 
 
-            <!-- SUCCESSO -->
+            <!-- CONFERMA AVVENUTA -->
 
             <div
                 class="confirmed"
@@ -2009,17 +1699,10 @@ function aggiornaCountdown() {
 
     if (differenza <= 0) {
 
-        document.getElementById("days")
-            .textContent = "00";
-
-        document.getElementById("hours")
-            .textContent = "00";
-
-        document.getElementById("minutes")
-            .textContent = "00";
-
-        document.getElementById("seconds")
-            .textContent = "00";
+        document.getElementById("days").textContent = "00";
+        document.getElementById("hours").textContent = "00";
+        document.getElementById("minutes").textContent = "00";
+        document.getElementById("seconds").textContent = "00";
 
         return;
     }
@@ -2062,28 +1745,17 @@ function aggiornaCountdown() {
         );
 
 
-    document.getElementById("days")
-        .textContent =
-        String(giorni)
-        .padStart(2,"0");
+    document.getElementById("days").textContent =
+        String(giorni).padStart(2,"0");
 
+    document.getElementById("hours").textContent =
+        String(ore).padStart(2,"0");
 
-    document.getElementById("hours")
-        .textContent =
-        String(ore)
-        .padStart(2,"0");
+    document.getElementById("minutes").textContent =
+        String(minuti).padStart(2,"0");
 
-
-    document.getElementById("minutes")
-        .textContent =
-        String(minuti)
-        .padStart(2,"0");
-
-
-    document.getElementById("seconds")
-        .textContent =
-        String(secondi)
-        .padStart(2,"0");
+    document.getElementById("seconds").textContent =
+        String(secondi).padStart(2,"0");
 
 }
 
@@ -2113,14 +1785,12 @@ function openColor(
 
     document.getElementById(
         "modalDescription"
-    ).textContent =
-        descrizione;
+    ).textContent = descrizione;
 
 
     document.getElementById(
         "modalColor"
-    ).style.background =
-        colore;
+    ).style.background = colore;
 
 
     document.getElementById(
@@ -2148,6 +1818,55 @@ function closeColor(event) {
 
 
 /* =====================================================
+   NUMERO PERSONE
+===================================================== */
+
+function gestisciNumeroPersone() {
+
+    const scelta =
+        document.getElementById(
+            "persone"
+        ).value;
+
+
+    const campo =
+        document.getElementById(
+            "numeroPersoneExtra"
+        );
+
+
+    const input =
+        document.getElementById(
+            "personeCustom"
+        );
+
+
+    if (scelta === "more") {
+
+        campo.style.display = "block";
+
+        input.required = true;
+
+        setTimeout(() => {
+
+            input.focus();
+
+        }, 100);
+
+    } else {
+
+        campo.style.display = "none";
+
+        input.required = false;
+
+        input.value = "";
+
+    }
+
+}
+
+
+/* =====================================================
    CONFERMA PRESENZA
 ===================================================== */
 
@@ -2168,10 +1887,45 @@ function submitRSVP(event) {
         ).value;
 
 
-    const persone =
+    let persone =
         document.getElementById(
             "persone"
         ).value;
+
+
+    /*
+       Se viene scelto
+       "Più di 3 persone",
+       prendiamo il numero
+       scritto dall'utente.
+    */
+
+    if (persone === "more") {
+
+        const personeCustom =
+            document.getElementById(
+                "personeCustom"
+            ).value;
+
+
+        if (
+            !personeCustom ||
+            Number(personeCustom) < 5
+        ) {
+
+            alert(
+                "Inserisci il numero totale delle persone."
+            );
+
+            return;
+
+        }
+
+
+        persone =
+            personeCustom + " persone";
+
+    }
 
 
     const note =
@@ -2199,14 +1953,15 @@ function submitRSVP(event) {
 
 
     /*
-       VERSIONE ATTUALE
+       SALVATAGGIO TEMPORANEO LOCALE
 
-       Salviamo la risposta
-       nel dispositivo/browser.
+       Per ora la risposta viene salvata
+       nel browser del dispositivo.
 
-       Nel prossimo passaggio
-       collegheremo questa funzione
-       a un database online.
+       Successivamente possiamo collegare
+       questa funzione a un database online,
+       così tutte le risposte arriveranno
+       a te.
     */
 
     const risposte =
@@ -2233,14 +1988,14 @@ function submitRSVP(event) {
     ).style.display = "none";
 
 
-    /* MOSTRA CONFERMA */
+    /* MOSTRA LA CONFERMA */
 
     document.getElementById(
         "confirmed"
     ).classList.add("active");
 
 
-    /* TORNA VISIBILMENTE ALLA CONFERMA */
+    /* SCROLL AUTOMATICO */
 
     setTimeout(() => {
 
