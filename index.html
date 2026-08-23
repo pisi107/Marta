@@ -4,11 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-<title>La sorpresa di Marta 🌊</title>
+<title>Marta Birthday 🌊</title>
 
 <meta name="theme-color" content="#78b9d5">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
 
 <style>
 
@@ -16,12 +14,13 @@
     --deep: #123c59;
     --blue: #28749a;
     --sky: #82c2dc;
-    --light: #dceff5;
+    --light-blue: #dceff5;
     --white: #ffffff;
     --sand: #d9c3a0;
     --sand-light: #f3eadc;
     --text: #17384d;
     --gray: #607782;
+    --success: #3c9b72;
 }
 
 * {
@@ -35,7 +34,14 @@ html {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
     color: var(--text);
     background: #eef8fb;
     overflow-x: hidden;
@@ -78,12 +84,14 @@ section {
     line-height: 1.7;
 }
 
-/* =========================
+
+/* =====================================================
    HERO
-========================= */
+===================================================== */
 
 .hero {
     min-height: 100svh;
+
     position: relative;
     overflow: hidden;
 
@@ -107,6 +115,7 @@ section {
 
 .sun {
     position: absolute;
+
     top: 70px;
     right: 12%;
 
@@ -124,6 +133,7 @@ section {
 .hero-content {
     position: relative;
     z-index: 2;
+
     max-width: 650px;
 }
 
@@ -135,12 +145,15 @@ section {
     border-radius: 50px;
 
     background: rgba(255,255,255,.18);
-    border: 1px solid rgba(255,255,255,.5);
+
+    border:
+        1px solid rgba(255,255,255,.5);
 
     color: white;
 
     font-size: 11px;
     font-weight: 700;
+
     letter-spacing: 2px;
 
     backdrop-filter: blur(10px);
@@ -151,9 +164,13 @@ section {
 .hero h1 {
     color: white;
 
-    font-family: Georgia, "Times New Roman", serif;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-    font-size: clamp(50px, 15vw, 90px);
+    font-size:
+        clamp(50px, 15vw, 90px);
 
     line-height: .95;
 
@@ -233,7 +250,10 @@ section {
     opacity: .8;
 }
 
-/* WAVES */
+
+/* =====================================================
+   ONDE
+===================================================== */
 
 .wave {
     position: absolute;
@@ -245,9 +265,11 @@ section {
 
     border-radius: 50%;
 
-    background: rgba(255,255,255,.23);
+    background:
+        rgba(255,255,255,.23);
 
-    animation: wave 8s ease-in-out infinite;
+    animation:
+        wave 8s ease-in-out infinite;
 }
 
 .wave.one {
@@ -256,11 +278,14 @@ section {
 
 .wave.two {
     bottom: -55px;
+
     opacity: .45;
+
     animation-delay: -3s;
 }
 
 @keyframes wave {
+
     0%,100% {
         transform: translateX(-2%);
     }
@@ -268,17 +293,20 @@ section {
     50% {
         transform: translateX(2%);
     }
+
 }
 
-/* =========================
+
+/* =====================================================
    COUNTDOWN
-========================= */
+===================================================== */
 
 .countdown-section {
     background: var(--sand-light);
 }
 
 .countdown {
+
     display: grid;
 
     grid-template-columns:
@@ -290,7 +318,9 @@ section {
 }
 
 .time-box {
-    background: rgba(255,255,255,.8);
+
+    background:
+        rgba(255,255,255,.8);
 
     border-radius: 18px;
 
@@ -299,10 +329,12 @@ section {
     text-align: center;
 
     box-shadow:
-        0 8px 25px rgba(100,70,40,.08);
+        0 8px 25px
+        rgba(100,70,40,.08);
 }
 
 .time-number {
+
     font-size: 28px;
 
     font-weight: 800;
@@ -311,6 +343,7 @@ section {
 }
 
 .time-label {
+
     margin-top: 5px;
 
     font-size: 9px;
@@ -322,15 +355,17 @@ section {
     color: #71828a;
 }
 
-/* =========================
-   MISSION
-========================= */
+
+/* =====================================================
+   MISSIONE
+===================================================== */
 
 .mission {
     background: white;
 }
 
 .mission-card {
+
     margin-top: 35px;
 
     padding: 30px 25px;
@@ -345,20 +380,25 @@ section {
         );
 
     box-shadow:
-        0 18px 50px rgba(18,60,89,.12);
+        0 18px 50px
+        rgba(18,60,89,.12);
 
     border:
-        1px solid rgba(35,101,138,.08);
+        1px solid
+        rgba(35,101,138,.08);
 
     text-align: center;
 }
 
 .mission-icon {
+
     font-size: 43px;
+
     margin-bottom: 15px;
 }
 
 .mission-card h3 {
+
     font-family: Georgia, serif;
 
     font-size: 26px;
@@ -369,12 +409,14 @@ section {
 }
 
 .mission-card p {
+
     line-height: 1.7;
 
     color: var(--gray);
 }
 
 .rules {
+
     display: grid;
 
     gap: 10px;
@@ -383,6 +425,7 @@ section {
 }
 
 .rule {
+
     background: white;
 
     border-radius: 14px;
@@ -392,14 +435,17 @@ section {
     font-size: 14px;
 
     box-shadow:
-        0 5px 15px rgba(0,0,0,.04);
+        0 5px 15px
+        rgba(0,0,0,.04);
 }
 
-/* =========================
-   INFO
-========================= */
+
+/* =====================================================
+   INFORMAZIONI
+===================================================== */
 
 .info-section {
+
     background:
         linear-gradient(
             180deg,
@@ -409,6 +455,7 @@ section {
 }
 
 .info-grid {
+
     display: grid;
 
     gap: 15px;
@@ -417,6 +464,7 @@ section {
 }
 
 .info-card {
+
     background: white;
 
     border-radius: 22px;
@@ -424,22 +472,26 @@ section {
     padding: 24px;
 
     box-shadow:
-        0 10px 30px rgba(35,101,138,.09);
+        0 10px 30px
+        rgba(35,101,138,.09);
 }
 
 .info-icon {
+
     font-size: 30px;
 
     margin-bottom: 12px;
 }
 
 .info-card h3 {
+
     font-size: 17px;
 
     margin-bottom: 8px;
 }
 
 .info-card p {
+
     color: var(--gray);
 
     line-height: 1.65;
@@ -448,6 +500,7 @@ section {
 }
 
 .map-btn {
+
     display: inline-block;
 
     margin-top: 14px;
@@ -467,11 +520,13 @@ section {
     font-weight: 800;
 }
 
-/* =========================
+
+/* =====================================================
    PALETTE
-========================= */
+===================================================== */
 
 .palette-section {
+
     background: var(--deep);
 
     color: white;
@@ -480,18 +535,23 @@ section {
 }
 
 .palette-section .section-label {
+
     color: var(--sky);
 }
 
 .palette-section .section-title {
+
     color: white;
 }
 
 .palette-section .section-text {
-    color: rgba(255,255,255,.72);
+
+    color:
+        rgba(255,255,255,.72);
 }
 
 .palette-wrapper {
+
     display: flex;
 
     flex-direction: column;
@@ -500,10 +560,12 @@ section {
 
     max-width: 650px;
 
-    margin: 40px auto 0;
+    margin:
+        40px auto 0;
 }
 
 .color-strip {
+
     min-height: 105px;
 
     border-radius: 5px;
@@ -521,14 +583,18 @@ section {
     transition: .25s;
 
     box-shadow:
-        0 8px 20px rgba(0,0,0,.15);
+        0 8px 20px
+        rgba(0,0,0,.15);
 }
 
 .color-strip:active {
-    transform: scale(.98);
+
+    transform:
+        scale(.98);
 }
 
 .color-name {
+
     font-weight: 800;
 
     letter-spacing: 1px;
@@ -537,59 +603,71 @@ section {
 }
 
 .color-code {
+
     font-size: 11px;
 
     opacity: .8;
 }
 
 .deep-sea {
+
     background: #123c59;
 }
 
 .ocean-blue {
+
     background: #28749a;
 }
 
 .sky-blue {
+
     background: #82c2dc;
 
     color: #17384d;
 }
 
 .white-color {
+
     background: white;
 
     color: #17384d;
 }
 
 .sand {
+
     background: #d9c3a0;
 
     color: #17384d;
 }
 
 .palette-note {
+
     text-align: center;
 
     margin-top: 25px;
 
-    color: rgba(255,255,255,.55);
+    color:
+        rgba(255,255,255,.55);
 
     font-size: 11px;
 }
 
-/* =========================
-   MODAL PALETTE
-========================= */
+
+/* =====================================================
+   MODAL COLORI
+===================================================== */
 
 .color-modal {
+
     position: fixed;
 
     inset: 0;
 
-    background: rgba(8,35,51,.75);
+    background:
+        rgba(8,35,51,.75);
 
-    backdrop-filter: blur(10px);
+    backdrop-filter:
+        blur(10px);
 
     display: none;
 
@@ -603,10 +681,12 @@ section {
 }
 
 .color-modal.active {
+
     display: flex;
 }
 
 .modal-box {
+
     width: 100%;
 
     max-width: 400px;
@@ -618,10 +698,12 @@ section {
     padding: 25px;
 
     box-shadow:
-        0 25px 70px rgba(0,0,0,.25);
+        0 25px 70px
+        rgba(0,0,0,.25);
 }
 
 .modal-color {
+
     height: 150px;
 
     border-radius: 18px;
@@ -630,6 +712,7 @@ section {
 }
 
 .modal-box h3 {
+
     font-family: Georgia, serif;
 
     font-size: 28px;
@@ -638,6 +721,7 @@ section {
 }
 
 .modal-box p {
+
     margin-top: 8px;
 
     color: var(--gray);
@@ -646,6 +730,7 @@ section {
 }
 
 .close-modal {
+
     margin-top: 22px;
 
     width: 100%;
@@ -663,15 +748,18 @@ section {
     font-weight: 700;
 }
 
-/* =========================
+
+/* =====================================================
    DRESS CODE
-========================= */
+===================================================== */
 
 .dress-section {
+
     background: #f7f1e8;
 }
 
 .dress-colors {
+
     display: flex;
 
     justify-content: center;
@@ -682,6 +770,7 @@ section {
 }
 
 .dress-color {
+
     width: 50px;
 
     height: 50px;
@@ -691,10 +780,12 @@ section {
     border: 4px solid white;
 
     box-shadow:
-        0 5px 15px rgba(0,0,0,.12);
+        0 5px 15px
+        rgba(0,0,0,.12);
 }
 
 .dress-text {
+
     text-align: center;
 
     font-family: Georgia, serif;
@@ -706,11 +797,13 @@ section {
     line-height: 1.5;
 }
 
-/* =========================
+
+/* =====================================================
    CONFERMA PRESENZA
-========================= */
+===================================================== */
 
 .rsvp-section {
+
     background:
         linear-gradient(
             180deg,
@@ -720,6 +813,7 @@ section {
 }
 
 .rsvp-card {
+
     margin-top: 35px;
 
     padding: 35px 25px;
@@ -728,19 +822,24 @@ section {
 
     background: white;
 
-    text-align: center;
-
     box-shadow:
-        0 15px 45px rgba(35,101,138,.1);
+        0 15px 45px
+        rgba(35,101,138,.1);
 }
 
 .rsvp-icon {
+
+    text-align: center;
+
     font-size: 42px;
 
     margin-bottom: 15px;
 }
 
 .rsvp-card h3 {
+
+    text-align: center;
+
     font-family: Georgia, serif;
 
     font-size: 27px;
@@ -750,7 +849,226 @@ section {
     margin-bottom: 12px;
 }
 
-.rsvp-card p {
+.rsvp-card > p {
+
+    text-align: center;
+
+    color: var(--gray);
+
+    line-height: 1.7;
+
+    font-size: 14px;
+
+    margin-bottom: 28px;
+}
+
+.form-group {
+
+    margin-bottom: 18px;
+}
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    color: var(--deep);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    border: 1px solid #d5e5eb;
+
+    background: #f8fcfd;
+
+    border-radius: 14px;
+
+    padding: 14px;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    color: var(--text);
+
+    outline: none;
+
+    transition: .2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    border-color: var(--sky);
+
+    background: white;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(130,194,220,.15);
+}
+
+.form-group textarea {
+
+    min-height: 85px;
+
+    resize: vertical;
+}
+
+
+/* SCELTA PRESENZA */
+
+.presence-options {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+}
+
+.presence-option {
+
+    position: relative;
+}
+
+.presence-option input {
+
+    position: absolute;
+
+    opacity: 0;
+}
+
+.presence-option label {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    min-height: 60px;
+
+    padding: 10px;
+
+    border-radius: 15px;
+
+    border:
+        1px solid #d5e5eb;
+
+    background: #f8fcfd;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: .2s;
+}
+
+.presence-option input:checked + label {
+
+    border-color:
+        var(--success);
+
+    background:
+        #e8f6ef;
+
+    color:
+        #277052;
+}
+
+
+/* INVIO */
+
+.confirm-btn {
+
+    width: 100%;
+
+    border: none;
+
+    border-radius: 50px;
+
+    padding: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #28749a,
+            #3c9b72
+        );
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 12px 30px
+        rgba(40,116,154,.2);
+
+    transition: .2s;
+}
+
+.confirm-btn:active {
+
+    transform:
+        scale(.98);
+}
+
+
+/* CONFERMA RIUSCITA */
+
+.confirmed {
+
+    display: none;
+
+    text-align: center;
+
+    padding: 20px 5px;
+}
+
+.confirmed.active {
+
+    display: block;
+}
+
+.confirmed-icon {
+
+    font-size: 60px;
+
+    margin-bottom: 15px;
+}
+
+.confirmed h3 {
+
+    font-family: Georgia, serif;
+
+    font-size: 29px;
+
+    color: var(--deep);
+
+    margin-bottom: 10px;
+}
+
+.confirmed p {
+
     color: var(--gray);
 
     line-height: 1.7;
@@ -758,73 +1076,55 @@ section {
     font-size: 14px;
 }
 
-.whatsapp-btn {
-    display: inline-flex;
 
-    align-items: center;
-
-    justify-content: center;
-
-    margin-top: 25px;
-
-    padding: 15px 25px;
-
-    border-radius: 50px;
-
-    background: #1fa855;
-
-    color: white;
-
-    text-decoration: none;
-
-    font-size: 14px;
-
-    font-weight: 800;
-
-    box-shadow:
-        0 10px 25px rgba(31,168,85,.2);
-}
-
-/* =========================
+/* =====================================================
    REGOLA D'ORO
-========================= */
+===================================================== */
 
 .secret-rule {
+
     background: var(--deep);
 
     color: white;
 }
 
 .secret-rule .section-label {
+
     color: var(--sky);
 }
 
 .secret-rule .section-title {
+
     color: white;
 }
 
 .secret-rule-card {
+
     margin-top: 35px;
 
     padding: 40px 25px;
 
     border-radius: 28px;
 
-    background: rgba(255,255,255,.05);
+    background:
+        rgba(255,255,255,.05);
 
     border:
-        1px solid rgba(255,255,255,.12);
+        1px solid
+        rgba(255,255,255,.12);
 
     text-align: center;
 }
 
 .big-lock {
+
     font-size: 48px;
 
     margin-bottom: 18px;
 }
 
 .secret-rule-card h3 {
+
     font-family: Georgia, serif;
 
     font-size: 28px;
@@ -833,32 +1133,39 @@ section {
 }
 
 .secret-rule-card p {
-    color: rgba(255,255,255,.7);
+
+    color:
+        rgba(255,255,255,.7);
 
     line-height: 1.7;
 }
 
-/* =========================
+
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 footer {
+
     padding: 55px 20px;
 
     background: #0b2738;
 
-    color: rgba(255,255,255,.7);
+    color:
+        rgba(255,255,255,.7);
 
     text-align: center;
 }
 
 .footer-icon {
+
     font-size: 35px;
 
     margin-bottom: 15px;
 }
 
 footer h3 {
+
     color: white;
 
     font-family: Georgia, serif;
@@ -869,18 +1176,21 @@ footer h3 {
 }
 
 footer p {
+
     margin-top: 10px;
 
     font-size: 12px;
 }
 
-/* =========================
+
+/* =====================================================
    DESKTOP
-========================= */
+===================================================== */
 
 @media (min-width: 700px) {
 
     .info-grid {
+
         grid-template-columns:
             repeat(3, 1fr);
     }
@@ -890,12 +1200,13 @@ footer p {
 </style>
 </head>
 
+
 <body>
 
 
-<!-- ==================================================
+<!-- =====================================================
      COPERTINA
-================================================== -->
+===================================================== -->
 
 <header class="hero">
 
@@ -917,8 +1228,12 @@ footer p {
             una grande sorpresa.
         </p>
 
-        <a href="#countdown" class="enter-btn">
+        <a
+            href="#countdown"
+            class="enter-btn">
+
             🌊 ENTRA NELLA MISSIONE
+
         </a>
 
     </div>
@@ -933,11 +1248,13 @@ footer p {
 </header>
 
 
-<!-- ==================================================
+<!-- =====================================================
      COUNTDOWN
-================================================== -->
+===================================================== -->
 
-<section class="countdown-section" id="countdown">
+<section
+    class="countdown-section"
+    id="countdown">
 
     <div class="container">
 
@@ -957,23 +1274,54 @@ footer p {
         <div class="countdown">
 
             <div class="time-box">
-                <div class="time-number" id="days">00</div>
-                <div class="time-label">Giorni</div>
+                <div
+                    class="time-number"
+                    id="days">
+                    00
+                </div>
+
+                <div class="time-label">
+                    Giorni
+                </div>
             </div>
 
-            <div class="time-box">
-                <div class="time-number" id="hours">00</div>
-                <div class="time-label">Ore</div>
-            </div>
 
             <div class="time-box">
-                <div class="time-number" id="minutes">00</div>
-                <div class="time-label">Minuti</div>
+                <div
+                    class="time-number"
+                    id="hours">
+                    00
+                </div>
+
+                <div class="time-label">
+                    Ore
+                </div>
             </div>
 
+
             <div class="time-box">
-                <div class="time-number" id="seconds">00</div>
-                <div class="time-label">Secondi</div>
+                <div
+                    class="time-number"
+                    id="minutes">
+                    00
+                </div>
+
+                <div class="time-label">
+                    Minuti
+                </div>
+            </div>
+
+
+            <div class="time-box">
+                <div
+                    class="time-number"
+                    id="seconds">
+                    00
+                </div>
+
+                <div class="time-label">
+                    Secondi
+                </div>
             </div>
 
         </div>
@@ -983,9 +1331,9 @@ footer p {
 </section>
 
 
-<!-- ==================================================
+<!-- =====================================================
      MISSIONE
-================================================== -->
+===================================================== -->
 
 <section class="mission">
 
@@ -1023,19 +1371,23 @@ footer p {
             <div class="rules">
 
                 <div class="rule">
-                    🤫 <strong>Regola #1</strong> — Non dire nulla a Marta.
+                    🤫 <strong>Regola #1</strong>
+                    — Non dire nulla a Marta.
                 </div>
 
                 <div class="rule">
-                    📱 <strong>Regola #2</strong> — Attenzione alle notifiche.
+                    📱 <strong>Regola #2</strong>
+                    — Attenzione alle notifiche.
                 </div>
 
                 <div class="rule">
-                    ⏰ <strong>Regola #3</strong> — Rispettare l'orario.
+                    ⏰ <strong>Regola #3</strong>
+                    — Rispettare l'orario.
                 </div>
 
                 <div class="rule">
-                    🎉 <strong>Regola #4</strong> — Divertirsi.
+                    🎉 <strong>Regola #4</strong>
+                    — Divertirsi.
                 </div>
 
             </div>
@@ -1047,9 +1399,9 @@ footer p {
 </section>
 
 
-<!-- ==================================================
+<!-- =====================================================
      INFORMAZIONI
-================================================== -->
+===================================================== -->
 
 <section class="info-section">
 
@@ -1114,7 +1466,9 @@ footer p {
 
                 <p>
                     Piazza Pergusa n.4<br>
-                    <strong>91016 Erice Casa Santa</strong>
+                    <strong>
+                        91016 Erice Casa Santa
+                    </strong>
                 </p>
 
                 <a
@@ -1128,7 +1482,6 @@ footer p {
 
             </div>
 
-
         </div>
 
     </div>
@@ -1136,9 +1489,9 @@ footer p {
 </section>
 
 
-<!-- ==================================================
-     PALETTE PANTONE
-================================================== -->
+<!-- =====================================================
+     PALETTE
+===================================================== -->
 
 <section class="palette-section">
 
@@ -1257,7 +1610,6 @@ footer p {
 
         </div>
 
-
         <p class="palette-note">
             Tocca un colore per scoprirne il significato.
         </p>
@@ -1267,9 +1619,9 @@ footer p {
 </section>
 
 
-<!-- ==================================================
+<!-- =====================================================
      DRESS CODE
-================================================== -->
+===================================================== -->
 
 <section class="dress-section">
 
@@ -1321,11 +1673,13 @@ footer p {
 </section>
 
 
-<!-- ==================================================
+<!-- =====================================================
      CONFERMA PRESENZA
-================================================== -->
+===================================================== -->
 
-<section class="rsvp-section">
+<section
+    class="rsvp-section"
+    id="conferma">
 
     <div class="container">
 
@@ -1334,48 +1688,188 @@ footer p {
         </div>
 
         <h2 class="section-title">
-            Ci sarai?
+            Conferma presenza
         </h2>
 
         <p class="section-text">
-            Per aiutarci a organizzare tutto al meglio,
-            conferma la tua presenza.
+            Facci sapere se sarai dei nostri.
+            Bastano pochi secondi.
         </p>
 
 
         <div class="rsvp-card">
 
+
             <div class="rsvp-icon">
                 💌
             </div>
 
+
             <h3>
-                Conferma la tua presenza
+                Ci sarai?
             </h3>
 
+
             <p>
-                Clicca sul pulsante qui sotto e
-                manda un messaggio all'organizzatore.
+                Compila il modulo qui sotto.
+                La tua risposta verrà registrata.
             </p>
 
 
-            <!--
-            IMPORTANTE:
-            Sostituisci 393XXXXXXXXX
-            con il numero WhatsApp dell'organizzatore.
+            <form
+                id="rsvpForm"
+                onsubmit="submitRSVP(event)">
 
-            Esempio:
-            393331234567
-            -->
 
-            <a
-                class="whatsapp-btn"
-                href="https://wa.me/393XXXXXXXXX?text=Ciao!%20Confermo%20la%20mia%20presenza%20alla%20festa%20di%20Marta%20%F0%9F%8C%8A"
-                target="_blank">
+                <!-- NOME -->
 
-                💬 CONFERMA SU WHATSAPP
+                <div class="form-group">
 
-            </a>
+                    <label for="nome">
+                        Nome e cognome
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        placeholder="Es. Mario Rossi"
+                        required>
+
+                </div>
+
+
+                <!-- PRESENZA -->
+
+                <div class="form-group">
+
+                    <label>
+                        Parteciperai alla festa?
+                    </label>
+
+
+                    <div class="presence-options">
+
+
+                        <div class="presence-option">
+
+                            <input
+                                type="radio"
+                                id="si"
+                                name="presenza"
+                                value="SI"
+                                required>
+
+                            <label for="si">
+                                🎉 SÌ, CI SARÒ!
+                            </label>
+
+                        </div>
+
+
+                        <div class="presence-option">
+
+                            <input
+                                type="radio"
+                                id="no"
+                                name="presenza"
+                                value="NO">
+
+                            <label for="no">
+                                😔 NON POSSO
+                            </label>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- PERSONE AGGIUNTIVE -->
+
+                <div class="form-group">
+
+                    <label for="persone">
+                        Numero di persone
+                    </label>
+
+                    <select id="persone">
+
+                        <option value="1">
+                            Solo io
+                        </option>
+
+                        <option value="2">
+                            Io + 1 persona
+                        </option>
+
+                        <option value="3">
+                            Io + 2 persone
+                        </option>
+
+                        <option value="4">
+                            Io + 3 persone
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- NOTE -->
+
+                <div class="form-group">
+
+                    <label for="note">
+                        Eventuali note
+                    </label>
+
+                    <textarea
+                        id="note"
+                        placeholder="Scrivi qui eventuali informazioni...">
+                    </textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="confirm-btn">
+
+                    🌊 CONFERMA PRESENZA
+
+                </button>
+
+
+            </form>
+
+
+            <!-- SUCCESSO -->
+
+            <div
+                class="confirmed"
+                id="confirmed">
+
+                <div class="confirmed-icon">
+                    🎉
+                </div>
+
+                <h3>
+                    Presenza registrata!
+                </h3>
+
+                <p>
+                    Grazie per aver confermato.
+                    <br><br>
+                    Ci vediamo alla festa di Marta.
+                    <br>
+                    🤫 E ricordati...
+                    è una sorpresa!
+                </p>
+
+            </div>
+
 
         </div>
 
@@ -1384,9 +1878,9 @@ footer p {
 </section>
 
 
-<!-- ==================================================
+<!-- =====================================================
      REGOLA D'ORO
-================================================== -->
+===================================================== -->
 
 <section class="secret-rule">
 
@@ -1429,9 +1923,9 @@ footer p {
 </section>
 
 
-<!-- ==================================================
+<!-- =====================================================
      FOOTER
-================================================== -->
+===================================================== -->
 
 <footer>
 
@@ -1454,9 +1948,9 @@ footer p {
 </footer>
 
 
-<!-- ==================================================
+<!-- =====================================================
      MODAL PALETTE
-================================================== -->
+===================================================== -->
 
 <div
     class="color-modal"
@@ -1493,12 +1987,15 @@ footer p {
 
 <script>
 
-/* ==================================================
+
+/* =====================================================
    COUNTDOWN
-================================================== */
+===================================================== */
 
 const festa =
-    new Date("August 25, 2026 20:00:00").getTime();
+    new Date(
+        "August 25, 2026 20:00:00"
+    ).getTime();
 
 
 function aggiornaCountdown() {
@@ -1512,10 +2009,17 @@ function aggiornaCountdown() {
 
     if (differenza <= 0) {
 
-        document.getElementById("days").textContent = "00";
-        document.getElementById("hours").textContent = "00";
-        document.getElementById("minutes").textContent = "00";
-        document.getElementById("seconds").textContent = "00";
+        document.getElementById("days")
+            .textContent = "00";
+
+        document.getElementById("hours")
+            .textContent = "00";
+
+        document.getElementById("minutes")
+            .textContent = "00";
+
+        document.getElementById("seconds")
+            .textContent = "00";
 
         return;
     }
@@ -1530,42 +2034,56 @@ function aggiornaCountdown() {
 
     const ore =
         Math.floor(
-            (differenza %
-            (1000 * 60 * 60 * 24)) /
+            (
+                differenza %
+                (1000 * 60 * 60 * 24)
+            ) /
             (1000 * 60 * 60)
         );
 
 
     const minuti =
         Math.floor(
-            (differenza %
-            (1000 * 60 * 60)) /
+            (
+                differenza %
+                (1000 * 60 * 60)
+            ) /
             (1000 * 60)
         );
 
 
     const secondi =
         Math.floor(
-            (differenza %
-            (1000 * 60)) /
+            (
+                differenza %
+                (1000 * 60)
+            ) /
             1000
         );
 
 
-    document.getElementById("days").textContent =
-        String(giorni).padStart(2,"0");
+    document.getElementById("days")
+        .textContent =
+        String(giorni)
+        .padStart(2,"0");
 
 
-    document.getElementById("hours").textContent =
-        String(ore).padStart(2,"0");
+    document.getElementById("hours")
+        .textContent =
+        String(ore)
+        .padStart(2,"0");
 
 
-    document.getElementById("minutes").textContent =
-        String(minuti).padStart(2,"0");
+    document.getElementById("minutes")
+        .textContent =
+        String(minuti)
+        .padStart(2,"0");
 
 
-    document.getElementById("seconds").textContent =
-        String(secondi).padStart(2,"0");
+    document.getElementById("seconds")
+        .textContent =
+        String(secondi)
+        .padStart(2,"0");
 
 }
 
@@ -1578,9 +2096,9 @@ setInterval(
 );
 
 
-/* ==================================================
+/* =====================================================
    PALETTE INTERATTIVA
-================================================== */
+===================================================== */
 
 function openColor(
     nome,
@@ -1595,12 +2113,14 @@ function openColor(
 
     document.getElementById(
         "modalDescription"
-    ).textContent = descrizione;
+    ).textContent =
+        descrizione;
 
 
     document.getElementById(
         "modalColor"
-    ).style.background = colore;
+    ).style.background =
+        colore;
 
 
     document.getElementById(
@@ -1623,6 +2143,115 @@ function closeColor(event) {
         ).classList.remove("active");
 
     }
+
+}
+
+
+/* =====================================================
+   CONFERMA PRESENZA
+===================================================== */
+
+function submitRSVP(event) {
+
+    event.preventDefault();
+
+
+    const nome =
+        document.getElementById(
+            "nome"
+        ).value.trim();
+
+
+    const presenza =
+        document.querySelector(
+            'input[name="presenza"]:checked'
+        ).value;
+
+
+    const persone =
+        document.getElementById(
+            "persone"
+        ).value;
+
+
+    const note =
+        document.getElementById(
+            "note"
+        ).value.trim();
+
+
+    const risposta = {
+
+        nome: nome,
+
+        presenza: presenza,
+
+        persone: persone,
+
+        note: note,
+
+        data:
+            new Date().toLocaleString(
+                "it-IT"
+            )
+
+    };
+
+
+    /*
+       VERSIONE ATTUALE
+
+       Salviamo la risposta
+       nel dispositivo/browser.
+
+       Nel prossimo passaggio
+       collegheremo questa funzione
+       a un database online.
+    */
+
+    const risposte =
+        JSON.parse(
+            localStorage.getItem(
+                "marta_rsvp"
+            ) || "[]"
+        );
+
+
+    risposte.push(risposta);
+
+
+    localStorage.setItem(
+        "marta_rsvp",
+        JSON.stringify(risposte)
+    );
+
+
+    /* NASCONDE IL FORM */
+
+    document.getElementById(
+        "rsvpForm"
+    ).style.display = "none";
+
+
+    /* MOSTRA CONFERMA */
+
+    document.getElementById(
+        "confirmed"
+    ).classList.add("active");
+
+
+    /* TORNA VISIBILMENTE ALLA CONFERMA */
+
+    setTimeout(() => {
+
+        document.getElementById(
+            "confirmed"
+        ).scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+
+    }, 100);
 
 }
 
