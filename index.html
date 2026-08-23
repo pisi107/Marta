@@ -1,0 +1,1675 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<title>La sorpresa di Marta 🌊</title>
+
+<meta name="theme-color" content="#79b9d4">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+<style>
+
+:root {
+    --mare-profondo: #123c59;
+    --blu-mare: #23658a;
+    --azzurro: #78b9d5;
+    --azzurro-chiaro: #b9dce8;
+    --bianco: #ffffff;
+    --sabbia: #d9c3a0;
+    --sabbia-chiara: #efe3cd;
+    --testo: #17384d;
+    --ombra: 0 18px 50px rgba(18,60,89,.15);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--testo);
+    background: #eef8fb;
+    overflow-x: hidden;
+}
+
+/* =========================
+   ONDE
+========================= */
+
+.wave {
+    position: absolute;
+    left: -10%;
+    width: 120%;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.25);
+    animation: waveMove 8s ease-in-out infinite;
+}
+
+.wave.one {
+    bottom: -35px;
+}
+
+.wave.two {
+    bottom: -55px;
+    opacity: .5;
+    animation-delay: -3s;
+}
+
+@keyframes waveMove {
+    0%,100% {
+        transform: translateX(-2%);
+    }
+    50% {
+        transform: translateX(2%);
+    }
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100svh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 35px 25px 100px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #86c7df 0%,
+            #6fb0cf 32%,
+            #387ea4 65%,
+            #17516f 100%
+        );
+}
+
+.sun {
+    position: absolute;
+    top: 70px;
+    right: 12%;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.55);
+    filter: blur(2px);
+    box-shadow: 0 0 60px rgba(255,255,255,.35);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+}
+
+.secret-label {
+    display: inline-block;
+    padding: 9px 18px;
+    border-radius: 50px;
+    background: rgba(255,255,255,.18);
+    border: 1px solid rgba(255,255,255,.5);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    backdrop-filter: blur(10px);
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    color: white;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(48px, 15vw, 88px);
+    line-height: .95;
+    font-weight: 400;
+    margin-bottom: 22px;
+    text-shadow: 0 8px 25px rgba(0,0,0,.12);
+}
+
+.hero h1 span {
+    display: block;
+    font-size: .55em;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.hero-subtitle {
+    color: rgba(255,255,255,.92);
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 420px;
+    margin: auto;
+}
+
+.enter-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 35px;
+    padding: 16px 27px;
+    border-radius: 50px;
+    background: white;
+    color: var(--mare-profondo);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: .5px;
+    box-shadow: 0 15px 35px rgba(0,0,0,.18);
+    transition: .25s;
+}
+
+.enter-btn:active {
+    transform: scale(.96);
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 28px;
+    color: white;
+    font-size: 12px;
+    letter-spacing: 2px;
+    opacity: .8;
+}
+
+/* =========================
+   SEZIONI
+========================= */
+
+section {
+    padding: 75px 20px;
+    position: relative;
+}
+
+.container {
+    max-width: 850px;
+    margin: auto;
+}
+
+.section-label {
+    text-align: center;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--blu-mare);
+    margin-bottom: 12px;
+}
+
+.section-title {
+    text-align: center;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 38px;
+    font-weight: 400;
+    color: var(--mare-profondo);
+    margin-bottom: 18px;
+}
+
+.section-text {
+    text-align: center;
+    color: #547080;
+    line-height: 1.7;
+    max-width: 580px;
+    margin: auto;
+}
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown-section {
+    background: var(--sabbia-chiara);
+}
+
+.countdown {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 9px;
+    margin-top: 35px;
+}
+
+.time-box {
+    background: rgba(255,255,255,.75);
+    border-radius: 18px;
+    padding: 18px 5px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(100,70,40,.08);
+}
+
+.time-number {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--mare-profondo);
+}
+
+.time-label {
+    margin-top: 5px;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #6d7e85;
+}
+
+/* =========================
+   MISSIONE
+========================= */
+
+.mission {
+    background: white;
+}
+
+.mission-card {
+    margin-top: 35px;
+    padding: 30px 25px;
+    border-radius: 28px;
+    background: linear-gradient(145deg,#f8fcfd,#e5f4f8);
+    box-shadow: var(--ombra);
+    border: 1px solid rgba(35,101,138,.08);
+}
+
+.mission-icon {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.mission-card h3 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    color: var(--mare-profondo);
+    margin-bottom: 15px;
+}
+
+.mission-card p {
+    line-height: 1.7;
+    color: #587180;
+}
+
+.rules {
+    margin-top: 25px;
+    display: grid;
+    gap: 10px;
+}
+
+.rule {
+    background: white;
+    border-radius: 14px;
+    padding: 14px;
+    font-size: 14px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.04);
+}
+
+/* =========================
+   INFO
+========================= */
+
+.info-section {
+    background:
+        linear-gradient(
+            180deg,
+            #eef8fb,
+            #dceff5
+        );
+}
+
+.info-grid {
+    display: grid;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.info-card {
+    background: white;
+    border-radius: 22px;
+    padding: 23px;
+    box-shadow: 0 10px 30px rgba(35,101,138,.09);
+}
+
+.info-card .icon {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.info-card h3 {
+    font-size: 17px;
+    margin-bottom: 7px;
+}
+
+.info-card p {
+    color: #637984;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.map-btn {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 16px;
+    background: var(--blu-mare);
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* =========================
+   PALETTE PANTONE
+========================= */
+
+.palette-section {
+    background: var(--mare-profondo);
+    color: white;
+    overflow: hidden;
+}
+
+.palette-section .section-label {
+    color: var(--azzurro-chiaro);
+}
+
+.palette-section .section-title {
+    color: white;
+}
+
+.palette-section .section-text {
+    color: rgba(255,255,255,.72);
+}
+
+.palette-wrapper {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.color-strip {
+    position: relative;
+    min-height: 105px;
+    border-radius: 5px;
+    padding: 18px 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    cursor: pointer;
+    overflow: hidden;
+    transition: .3s;
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+}
+
+.color-strip:active {
+    transform: scale(.98);
+}
+
+.color-strip::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        110deg,
+        transparent 20%,
+        rgba(255,255,255,.25) 50%,
+        transparent 80%
+    );
+    transform: translateX(-100%);
+    transition: .6s;
+}
+
+.color-strip:hover::after {
+    transform: translateX(100%);
+}
+
+.color-name {
+    font-weight: 800;
+    letter-spacing: 1px;
+    font-size: 14px;
+    position: relative;
+    z-index: 2;
+}
+
+.color-code {
+    font-size: 11px;
+    opacity: .8;
+    position: relative;
+    z-index: 2;
+}
+
+.deep-sea {
+    background: #123c59;
+    color: white;
+}
+
+.ocean-blue {
+    background: #28749a;
+    color: white;
+}
+
+.sky-blue {
+    background: #82c2dc;
+    color: #17384d;
+}
+
+.white-color {
+    background: #ffffff;
+    color: #17384d;
+}
+
+.sand {
+    background: #d9c3a0;
+    color: #17384d;
+}
+
+.palette-note {
+    margin-top: 25px;
+    text-align: center;
+    color: rgba(255,255,255,.55);
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+/* =========================
+   MODAL COLORE
+========================= */
+
+.color-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(8,35,51,.75);
+    backdrop-filter: blur(10px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 25px;
+}
+
+.color-modal.active {
+    display: flex;
+}
+
+.modal-box {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    border-radius: 28px;
+    padding: 25px;
+    box-shadow: 0 25px 70px rgba(0,0,0,.25);
+    animation: modalIn .3s ease;
+}
+
+@keyframes modalIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(.97);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.modal-color {
+    height: 150px;
+    border-radius: 18px;
+    margin-bottom: 22px;
+}
+
+.modal-box h3 {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    color: var(--mare-profondo);
+}
+
+.modal-box p {
+    margin-top: 8px;
+    color: #61737d;
+    line-height: 1.6;
+}
+
+.close-modal {
+    margin-top: 22px;
+    width: 100%;
+    border: 0;
+    padding: 13px;
+    border-radius: 50px;
+    background: var(--mare-profondo);
+    color: white;
+    font-weight: 700;
+}
+
+/* =========================
+   DRESS CODE
+========================= */
+
+.dress-section {
+    background: #f7f1e8;
+}
+
+.dress-colors {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 30px auto;
+}
+
+.dress-color {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0,0,0,.12);
+    border: 4px solid white;
+}
+
+.dress-message {
+    max-width: 520px;
+    margin: auto;
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 23px;
+    line-height: 1.5;
+    color: var(--mare-profondo);
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline-section {
+    background: white;
+}
+
+.timeline {
+    margin-top: 40px;
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 25px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #c6e0e9;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 65px;
+    padding-bottom: 30px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 16px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--azzurro);
+    border: 4px solid white;
+    box-shadow: 0 0 0 2px #b6dce8;
+}
+
+.timeline-time {
+    font-weight: 800;
+    font-size: 13px;
+    color: var(--blu-mare);
+    margin-bottom: 4px;
+}
+
+.timeline-title {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.timeline-text {
+    color: #6b7e87;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* =========================
+   COSA PORTARE
+========================= */
+
+.bring-section {
+    background: linear-gradient(180deg,#dff1f6,#f5fbfc);
+}
+
+.bring-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 35px;
+}
+
+.bring-card {
+    background: white;
+    border-radius: 20px;
+    padding: 22px 12px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(35,101,138,.07);
+}
+
+.bring-card .emoji {
+    font-size: 31px;
+    margin-bottom: 10px;
+}
+
+.bring-card strong {
+    display: block;
+    font-size: 13px;
+}
+
+.bring-card span {
+    display: block;
+    margin-top: 5px;
+    font-size: 11px;
+    color: #78909b;
+}
+
+/* =========================
+   AREA TOP SECRET
+========================= */
+
+.secret-section {
+    background: #102f43;
+    color: white;
+}
+
+.secret-box {
+    margin-top: 35px;
+    padding: 35px 25px;
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 25px;
+    text-align: center;
+    background: rgba(255,255,255,.04);
+}
+
+.lock {
+    font-size: 45px;
+    margin-bottom: 18px;
+}
+
+.secret-box h3 {
+    font-family: Georgia, serif;
+    font-size: 27px;
+    margin-bottom: 12px;
+}
+
+.secret-box p {
+    color: rgba(255,255,255,.65);
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.secret-btn {
+    margin-top: 23px;
+    border: 1px solid rgba(255,255,255,.3);
+    background: transparent;
+    color: white;
+    border-radius: 50px;
+    padding: 13px 20px;
+    font-weight: 700;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 55px 20px;
+    background: #0b2738;
+    color: rgba(255,255,255,.7);
+    text-align: center;
+}
+
+.footer-heart {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+footer h3 {
+    color: white;
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 700px) {
+
+    .info-grid {
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .bring-grid {
+        grid-template-columns: repeat(4,1fr);
+    }
+
+    .palette-wrapper {
+        max-width: 650px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .mission-card {
+        padding: 40px;
+    }
+
+}
+
+/* =========================
+   SAFE AREA IPHONE
+========================= */
+
+@supports (padding: max(0px)) {
+
+    .hero {
+        padding-top: max(35px, env(safe-area-inset-top));
+    }
+
+    footer {
+        padding-bottom: max(55px, env(safe-area-inset-bottom));
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ==================================================
+     HERO
+================================================== -->
+
+<header class="hero">
+
+    <div class="sun"></div>
+
+    <div class="hero-content">
+
+        <div class="secret-label">
+            🤫 MISSIONE SEGRETA
+        </div>
+
+        <h1>
+            Marta
+            <span>birthday by the sea</span>
+        </h1>
+
+        <p class="hero-subtitle">
+            Una piccola pagina per organizzare
+            una grande sorpresa.
+        </p>
+
+        <a href="#countdown" class="enter-btn">
+            🌊 ENTRA NELLA MISSIONE
+        </a>
+
+    </div>
+
+    <div class="wave one"></div>
+    <div class="wave two"></div>
+
+    <div class="scroll-indicator">
+        SCORRI ↓
+    </div>
+
+</header>
+
+
+<!-- ==================================================
+     COUNTDOWN
+================================================== -->
+
+<section class="countdown-section" id="countdown">
+
+    <div class="container">
+
+        <div class="section-label">
+            La sorpresa si avvicina
+        </div>
+
+        <h2 class="section-title">
+            Quanto manca?
+        </h2>
+
+        <p class="section-text">
+            Il conto alla rovescia è ufficialmente iniziato.
+            Mi raccomando: Marta non deve sapere nulla. 🤫
+        </p>
+
+        <div class="countdown">
+
+            <div class="time-box">
+                <div class="time-number" id="days">00</div>
+                <div class="time-label">Giorni</div>
+            </div>
+
+            <div class="time-box">
+                <div class="time-number" id="hours">00</div>
+                <div class="time-label">Ore</div>
+            </div>
+
+            <div class="time-box">
+                <div class="time-number" id="minutes">00</div>
+                <div class="time-label">Minuti</div>
+            </div>
+
+            <div class="time-box">
+                <div class="time-number" id="seconds">00</div>
+                <div class="time-label">Secondi</div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     MISSIONE
+================================================== -->
+
+<section class="mission">
+
+    <div class="container">
+
+        <div class="section-label">
+            Operazione compleanno
+        </div>
+
+        <h2 class="section-title">
+            La missione
+        </h2>
+
+        <p class="section-text">
+            Siamo qui per organizzare una sorpresa
+            che Marta non dovrà assolutamente scoprire.
+        </p>
+
+        <div class="mission-card">
+
+            <div class="mission-icon">
+                🎯
+            </div>
+
+            <h3>
+                Obiettivo: sorprendere Marta
+            </h3>
+
+            <p>
+                Tutti devono arrivare preparati,
+                puntuali e soprattutto...
+                estremamente bravi a mantenere un segreto.
+            </p>
+
+            <div class="rules">
+
+                <div class="rule">
+                    🤫 <strong>Regola #1</strong> — Non dire nulla a Marta.
+                </div>
+
+                <div class="rule">
+                    📱 <strong>Regola #2</strong> — Occhio alle notifiche.
+                </div>
+
+                <div class="rule">
+                    ⏰ <strong>Regola #3</strong> — Arrivare puntuali.
+                </div>
+
+                <div class="rule">
+                    🎉 <strong>Regola #4</strong> — Divertirsi tantissimo.
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     INFORMAZIONI
+================================================== -->
+
+<section class="info-section">
+
+    <div class="container">
+
+        <div class="section-label">
+            Tutto quello che devi sapere
+        </div>
+
+        <h2 class="section-title">
+            Informazioni
+        </h2>
+
+        <div class="info-grid">
+
+            <div class="info-card">
+
+                <div class="icon">📅</div>
+
+                <h3>Quando</h3>
+
+                <p>
+                    Martedì<br>
+                    <strong>25 Agosto 2026</strong>
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="icon">📍</div>
+
+                <h3>Dove</h3>
+
+                <p>
+                    NOME LOCATION<br>
+                    <strong>Inserire indirizzo</strong>
+                </p>
+
+                <a
+                    class="map-btn"
+                    href="https://maps.google.com"
+                    target="_blank">
+                    APRI MAPPA
+                </a>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="icon">🕐</div>
+
+                <h3>Orario</h3>
+
+                <p>
+                    Ritrovo invitati<br>
+                    <strong>18:30</strong>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     PALETTE PANTONE
+================================================== -->
+
+<section class="palette-section">
+
+    <div class="container">
+
+        <div class="section-label">
+            The colors of the sea
+        </div>
+
+        <h2 class="section-title">
+            Palette Pantone
+        </h2>
+
+        <p class="section-text">
+            I colori ufficiali della festa:
+            mare, cielo, sabbia e luce.
+        </p>
+
+
+        <div class="palette-wrapper">
+
+
+            <div
+                class="color-strip deep-sea"
+                onclick="openColor(
+                    'DEEP SEA',
+                    '#123C59',
+                    'Il blu profondo del mare al tramonto.'
+                )">
+
+                <span class="color-name">
+                    DEEP SEA
+                </span>
+
+                <span class="color-code">
+                    #123C59
+                </span>
+
+            </div>
+
+
+            <div
+                class="color-strip ocean-blue"
+                onclick="openColor(
+                    'OCEAN BLUE',
+                    '#28749A',
+                    'Il blu dell’acqua quando il mare riflette il cielo.'
+                )">
+
+                <span class="color-name">
+                    OCEAN BLUE
+                </span>
+
+                <span class="color-code">
+                    #28749A
+                </span>
+
+            </div>
+
+
+            <div
+                class="color-strip sky-blue"
+                onclick="openColor(
+                    'SKY BLUE',
+                    '#82C2DC',
+                    'Il colore del cielo in una giornata perfetta al mare.'
+                )">
+
+                <span class="color-name">
+                    SKY BLUE
+                </span>
+
+                <span class="color-code">
+                    #82C2DC
+                </span>
+
+            </div>
+
+
+            <div
+                class="color-strip white-color"
+                onclick="openColor(
+                    'PURE WHITE',
+                    '#FFFFFF',
+                    'La luce, la semplicità e l’eleganza della festa.'
+                )">
+
+                <span class="color-name">
+                    PURE WHITE
+                </span>
+
+                <span class="color-code">
+                    #FFFFFF
+                </span>
+
+            </div>
+
+
+            <div
+                class="color-strip sand"
+                onclick="openColor(
+                    'WARM SAND',
+                    '#D9C3A0',
+                    'Il colore della sabbia sotto i piedi.'
+                )">
+
+                <span class="color-name">
+                    WARM SAND
+                </span>
+
+                <span class="color-code">
+                    #D9C3A0
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <p class="palette-note">
+            Tocca un colore per scoprirne il significato.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     DRESS CODE
+================================================== -->
+
+<section class="dress-section">
+
+    <div class="container">
+
+        <div class="section-label">
+            Dress code
+        </div>
+
+        <h2 class="section-title">
+            Come ci vestiamo?
+        </h2>
+
+        <div class="dress-colors">
+
+            <div
+                class="dress-color"
+                style="background:#123c59;">
+            </div>
+
+            <div
+                class="dress-color"
+                style="background:#28749a;">
+            </div>
+
+            <div
+                class="dress-color"
+                style="background:#82c2dc;">
+            </div>
+
+            <div
+                class="dress-color"
+                style="background:#ffffff;">
+            </div>
+
+            <div
+                class="dress-color"
+                style="background:#d9c3a0;">
+            </div>
+
+        </div>
+
+        <p class="dress-message">
+            Blu · Bianco · Azzurro · Sabbia
+            <br><br>
+            “Vestiti come se stessi andando al mare...
+            anche se magari non ci vai.” 🌊
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     PROGRAMMA
+================================================== -->
+
+<section class="timeline-section">
+
+    <div class="container">
+
+        <div class="section-label">
+            Programma
+        </div>
+
+        <h2 class="section-title">
+            La serata
+        </h2>
+
+        <p class="section-text">
+            Una piccola anteprima di quello che succederà.
+        </p>
+
+
+        <div class="timeline">
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-time">
+                    18:30
+                </div>
+
+                <div class="timeline-title">
+                    Arrivo degli invitati
+                </div>
+
+                <div class="timeline-text">
+                    Tutti pronti e soprattutto...
+                    nascosti!
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-time">
+                    19:00
+                </div>
+
+                <div class="timeline-title">
+                    Aperitivo
+                </div>
+
+                <div class="timeline-text">
+                    Si comincia a festeggiare.
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-time">
+                    20:00
+                </div>
+
+                <div class="timeline-title">
+                    Cena
+                </div>
+
+                <div class="timeline-text">
+                    Buon cibo, musica e compagnia.
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-time">
+                    21:30
+                </div>
+
+                <div class="timeline-title">
+                    🎂 LA SORPRESA
+                </div>
+
+                <div class="timeline-text">
+                    È arrivato il momento.
+                    Tutti pronti!
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-time">
+                    22:00
+                </div>
+
+                <div class="timeline-title">
+                    🎶 Festa
+                </div>
+
+                <div class="timeline-text">
+                    Da questo momento...
+                    niente più regole.
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     COSA PORTARE
+================================================== -->
+
+<section class="bring-section">
+
+    <div class="container">
+
+        <div class="section-label">
+            Prima di uscire di casa
+        </div>
+
+        <h2 class="section-title">
+            Cosa portare
+        </h2>
+
+        <div class="bring-grid">
+
+            <div class="bring-card">
+
+                <div class="emoji">🎁</div>
+
+                <strong>Regalo</strong>
+
+                <span>
+                    Assolutamente sì
+                </span>
+
+            </div>
+
+
+            <div class="bring-card">
+
+                <div class="emoji">🥂</div>
+
+                <strong>Qualcosa da bere</strong>
+
+                <span>
+                    Se richiesto
+                </span>
+
+            </div>
+
+
+            <div class="bring-card">
+
+                <div class="emoji">📱</div>
+
+                <strong>Telefono</strong>
+
+                <span>
+                    Per le foto
+                </span>
+
+            </div>
+
+
+            <div class="bring-card">
+
+                <div class="emoji">🤫</div>
+
+                <strong>Segretezza</strong>
+
+                <span>
+                    Obbligatoria
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     AREA SEGRETA
+================================================== -->
+
+<section class="secret-section">
+
+    <div class="container">
+
+        <div class="section-label">
+            Accesso riservato
+        </div>
+
+        <h2 class="section-title">
+            Area Top Secret
+        </h2>
+
+        <div class="secret-box">
+
+            <div class="lock">
+                🔐
+            </div>
+
+            <h3>
+                Solo per gli invitati
+            </h3>
+
+            <p>
+                Qui possiamo mettere le informazioni
+                che non devono essere visibili immediatamente.
+            </p>
+
+            <button
+                class="secret-btn"
+                onclick="showSecret()">
+
+                🔓 APRI AREA SEGRETA
+
+            </button>
+
+            <p
+                id="secret-message"
+                style="
+                    display:none;
+                    margin-top:20px;
+                    color:white;
+                ">
+
+                🤫 Informazioni segrete da inserire...
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+
+<footer>
+
+    <div class="footer-heart">
+        🌊
+    </div>
+
+    <h3>
+        Per una serata speciale
+    </h3>
+
+    <p>
+        Marta Birthday · 25 Agosto 2026
+    </p>
+
+    <p style="margin-top:20px;">
+        🤫 Questa pagina è top secret.
+    </p>
+
+</footer>
+
+
+<!-- ==================================================
+     MODAL PALETTE
+================================================== -->
+
+<div
+    class="color-modal"
+    id="colorModal"
+    onclick="closeColor(event)">
+
+    <div class="modal-box">
+
+        <div
+            class="modal-color"
+            id="modalColor">
+        </div>
+
+        <h3 id="modalName">
+            Colore
+        </h3>
+
+        <p id="modalDescription">
+            Descrizione
+        </p>
+
+        <button
+            class="close-modal"
+            onclick="closeColor()">
+
+            CHIUDI
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* ==================================================
+   COUNTDOWN
+
+   DATA DELLA FESTA
+   Modifica qui se serve.
+================================================== */
+
+const festa = new Date("August 25, 2026 21:30:00").getTime();
+
+
+function aggiornaCountdown() {
+
+    const adesso = new Date().getTime();
+
+    const differenza = festa - adesso;
+
+    if (differenza <= 0) {
+
+        document.getElementById("days").textContent = "00";
+        document.getElementById("hours").textContent = "00";
+        document.getElementById("minutes").textContent = "00";
+        document.getElementById("seconds").textContent = "00";
+
+        return;
+    }
+
+
+    const giorni = Math.floor(
+        differenza / (1000 * 60 * 60 * 24)
+    );
+
+    const ore = Math.floor(
+        (differenza % (1000 * 60 * 60 * 24))
+        / (1000 * 60 * 60)
+    );
+
+    const minuti = Math.floor(
+        (differenza % (1000 * 60 * 60))
+        / (1000 * 60)
+    );
+
+    const secondi = Math.floor(
+        (differenza % (1000 * 60))
+        / 1000
+    );
+
+
+    document.getElementById("days").textContent =
+        String(giorni).padStart(2,"0");
+
+    document.getElementById("hours").textContent =
+        String(ore).padStart(2,"0");
+
+    document.getElementById("minutes").textContent =
+        String(minuti).padStart(2,"0");
+
+    document.getElementById("seconds").textContent =
+        String(secondi).padStart(2,"0");
+
+}
+
+
+aggiornaCountdown();
+
+setInterval(aggiornaCountdown,1000);
+
+
+/* ==================================================
+   PALETTE
+================================================== */
+
+function openColor(nome,colore,descrizione) {
+
+    document.getElementById("modalName").textContent =
+        nome;
+
+    document.getElementById("modalDescription").textContent =
+        descrizione;
+
+    document.getElementById("modalColor").style.background =
+        colore;
+
+    document.getElementById("colorModal")
+        .classList.add("active");
+
+}
+
+
+function closeColor(event) {
+
+    if (
+        !event ||
+        event.target.id === "colorModal" ||
+        event.target.classList.contains("close-modal")
+    ) {
+
+        document.getElementById("colorModal")
+            .classList.remove("active");
+
+    }
+
+}
+
+
+/* ==================================================
+   AREA SEGRETA
+================================================== */
+
+function showSecret() {
+
+    const messaggio =
+        document.getElementById("secret-message");
+
+    if (messaggio.style.display === "none") {
+
+        messaggio.style.display = "block";
+
+    } else {
+
+        messaggio.style.display = "none";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
